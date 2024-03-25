@@ -1,7 +1,7 @@
 [Variables]
  
-C1 =48,145,168
-C2 =250,206,55
+C1 =43,43,43
+C2 =162,162,162
 
 Scale = 10
 ScrollMouseIncrement = 0.05
