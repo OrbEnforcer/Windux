@@ -43,7 +43,20 @@
 [Volume.Measure]
  Measure = Plugin
  Plugin = Win7AudioPlugin
- Substitute= "0":"#@#Images/Volume.png","1":"#@#Images/Mute.png" 
+
+[Vol.Measure]
+ Measure = Calc
+ Formula = Volume.Measure
+ MinValue = 0
+ MaxValue = 100
+ RegExpSubstitute=1
+ Substitute = "-1":"0"
+
+[Language]
+ Measure = Plugin
+ Plugin = PowerShellRM
+ Line = Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.InputLanguage]::CurrentInputLanguage.Culture.DisplayName
+
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
