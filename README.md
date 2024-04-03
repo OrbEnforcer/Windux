@@ -9,4 +9,7 @@
 ## TO DO
 - [ ] Browser for Linux Bar
 - [ ] Custom Skin Menu
-- [ ] Being able to change element positions on the linux bar or turn them on/off 
+- [ ] Being able to change element positions on the linux bar or turn them on/off
+- [ ] Quick File Explorer
+- [ ] A better dock than my previous one
+- [ ] Winfetch without using terminal 
