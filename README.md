@@ -12,4 +12,5 @@
 - [ ] Being able to change element positions on the linux bar or turn them on/off
 - [ ] Quick File Explorer
 - [ ] A better dock than my previous one
-- [ ] Winfetch without using terminal 
+- [ ] Winfetch without using terminal
+- [ ] A custom start menu that opens instead of windows start menu when you click on home on bars
