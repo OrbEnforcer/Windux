@@ -14,3 +14,4 @@
 - [ ] A better dock than my previous one
 - [ ] Winfetch without using terminal
 - [ ] A custom start menu that opens instead of windows start menu when you click on home on bars
+- [ ] File Explorer for desktop
