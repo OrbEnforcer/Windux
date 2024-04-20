@@ -1,7 +1,3 @@
-[Wifi.SSID]
- Measure = WiFiStatus
- WiFiInfoType = SSID
-
 [Battery.Measure]
  Measure=Plugin
  Plugin=PowerPlugin
@@ -19,7 +15,7 @@
 
 [Date.Measure]
  Measure = Time
- Format = %a %d %B
+ Format = %a, %d %B
 
 [Status]
  Measure = Plugin
@@ -50,7 +46,7 @@
  MinValue = 0
  MaxValue = 100
  RegExpSubstitute=1
- Substitute = "-1":"0"
+ Substitute = "-1":"00"
 
 [Language]
  Measure = Plugin
@@ -68,7 +64,7 @@ Port = Output
 FFTSize = 1024
 FFTAttack = 75
 FFTDecay = 150
-Bands = 11
+Bands = 12
 
 [Band0]
 Measure = Plugin
@@ -146,3 +142,10 @@ Plugin = AudioLevel
 Parent = MeasureAudio
 Type = Band
 BandIdx = 10
+
+[Band10]
+Measure = Plugin
+Plugin = AudioLevel
+Parent = MeasureAudio
+Type = Band
+BandIdx = 11
