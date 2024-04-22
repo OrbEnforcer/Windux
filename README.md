@@ -1,6 +1,7 @@
-# Win-winned
+# Windux
 
-### Just a bunch of random ideas I took from reddit or other OS and tried to get them on windows through rainmeter.
+## Just a bunch of random ideas I took from reddit or other OS and tried to get them on windows through rainmeter.
+**NOTE - SKIN BEST WORKS ON 1920 x 1080 resolution screen**
 
 #### PREVIEW
 <img width="960" alt="2024-04-22 (8)" src="https://github.com/OrbEnforcer/Windux/assets/108188721/d71a714f-542d-4b85-ad95-0a28e4187367">
@@ -18,3 +19,5 @@
 -  Winfetch without using terminal
 -  ~~A custom start menu that opens instead of windows start menu when you click on home on bars~~
 -  ~~File Explorer for desktop~~
+
+
