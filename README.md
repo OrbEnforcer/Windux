@@ -12,7 +12,7 @@
 
 
 ## TO DO
--  Browser for Linux Bar
+-  Browser for Windux Bar
 -  ~~Custom Skin Menu~~
 -  Being able to change element positions on the linux bar or turn them on/off
 -  ~~A better dock than my previous one~~
