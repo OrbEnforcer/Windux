@@ -26,8 +26,16 @@
  Meter = String
  MeterStyle = FontStyle 
  Text = Home
- X = ([BG:W]/2.5)
+ X = ([BG:W]/2.4)
  Y = ([BG:Y]+25) 
+
+[HomeIcon]
+ Meter = Image
+ ImageName = #@#Images/Home.png
+ ImageTint = #HC#
+ W = ([BG:W]/12)
+ X = ([TopText:X]-40)
+ Y = ([BG:Y]+25)
 
 [L1]
  Meter = Shape
@@ -49,6 +57,14 @@
  FontWeight = 600
  X = ([L1:X]+135)
  Y = ([L1:Y]+35) 
+
+[Pin]
+ Meter = Image
+ ImageName = #@#Images/Pin.png
+ ImageTint = #HC#
+ W = ([BG:W]/16)
+ X = ([L1:X]+105)
+ Y = ([L1:Y]+38)
 
 [l2]
  Meter = Shape
@@ -134,9 +150,6 @@
  Group = On
  LeftMouseUpAction = [!CommandMeasure "Title" "Previous"]
 
-
-
-
 [L3]
  Meter = Shape
  Shape = Rectangle 0,0,([BG:W]-20), 3 | Fill Color #HC# 
@@ -158,7 +171,7 @@
  MeterStyle = FontStyle
  FontSize = (#SCREENAREAWIDTH#/150)
  FontWeight = 500
- Text = Timezone : UTC%1
+ Text = > Timezone : UTC%1
  X = ([L3:X])
  Y = ([SysInfo:Y]+35)
 
@@ -168,7 +181,7 @@
  MeterStyle = FontStyle
  FontSize = (#SCREENAREAWIDTH#/150)
  FontWeight = 500
- Text = OS : %1
+ Text = > OS : %1
  X = ([L3:X])
  Y = ([TimeZone.txt:Y]+35)
 
@@ -178,7 +191,7 @@
  MeterStyle = FontStyle
  FontSize = (#SCREENAREAWIDTH#/150)
  FontWeight = 500
- Text = WiFi : %1
+ Text = > WiFi : %1
  X = ([L3:X])
  Y = ([OSName.txt:Y]+35)
 
@@ -188,7 +201,7 @@
  MeterStyle = FontStyle
  FontSize = (#SCREENAREAWIDTH#/150)
  FontWeight = 500
- Text = Uptime : %1
+ Text = > Uptime : %1
  X = ([L3:X])
  Y = ([Wifi.txt:Y]+35)
 
@@ -198,7 +211,7 @@
  MeterStyle = FontStyle
  FontSize = (#SCREENAREAWIDTH#/150)
  FontWeight = 500
- Text = Idle Since : %1 seconds
+ Text = > Idle Since : %1 seconds
  X = ([L3:X])
  Y = ([Uptime.txt:Y]+35)
 
@@ -216,7 +229,7 @@
 
 [UserPFP]
  Meter = Image
- ImageName = "C:\Users\shwet\OneDrive\Pictures\PFP\New PFP.jpg"
+ ImageName = #@#Images/PFP/PFP.png
  Container = UserPFPContainer
  W = ([BG:W]/7)
  X = 0
@@ -233,15 +246,6 @@
  Text = user/@%1
  X = ([UserPFPContainer:X]+70)
  Y = ([UserPFPContainer:Y]+15)
-
-
-
-
-
-
-
-
-
 
 ;------------------------------------------------;
 ;                     APPS                       ;

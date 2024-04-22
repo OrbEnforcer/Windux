@@ -19,7 +19,7 @@
 [BG]
  Meter = Shape
  Shape = Rectangle 0, 0, #SCREENAREAWIDTH#, #SCREENAREAHEIGHT# , 0 | Fill Color #HC#,50
- LeftMouseUpAction =  [!ToggleConfig "Win-winned\Home" "Home.ini"]
+ LeftMouseUpAction =  [!ToggleConfig "Windux\Home\Home" "Home.ini"]
  MouseActionCursor = 0
 
 [TopText]

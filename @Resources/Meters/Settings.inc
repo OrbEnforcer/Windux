@@ -16,4 +16,4 @@
  W = 20
  X = 520
  Y = 10
- LeftMouseUpAction = [!DeactivateConfig "Win-winned\Settings" "Settings.ini"]
+ LeftMouseUpAction = [!DeactivateConfig "Windux\Settings" "Settings.ini"]
