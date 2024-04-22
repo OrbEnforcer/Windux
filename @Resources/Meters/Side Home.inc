@@ -13,7 +13,7 @@
 
 [BG]
  Meter = Shape
- Shape = Rectangle 0, 0, (#SCREENAREAWIDTH#/5), (#SCREENAREAHEIGHT#/1.1) , 0 | Fill Color #C1# | StrokeWidth 3 | Stroke Color #HC#
+ Shape = Rectangle 0, 0, (#SCREENAREAWIDTH#/5), (#SCREENAREAHEIGHT#/1.17) , 0 | Fill Color #C1# | StrokeWidth 3 | Stroke Color #HC#
  MouseActionCursor = 0
  X = 5
  Y = 5
@@ -45,7 +45,7 @@
 
 [AppsBoudary]
  Meter = Shape
- Shape = Rectangle 0,0, ([BG:W]-30) , ([BG:H]-750) | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
+ Shape = Rectangle 0,0, ([BG:W]-30) , ([BG:W]-150) | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
  X = ([L1:X]+5)
  Y = ([L1:Y]+25)
 
@@ -74,7 +74,7 @@
 
 [PlayerBoundary]
  Meter = Shape
- Shape = Rectangle 0,0, ([BG:W]-30) , ([BG:H]-750) | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
+ Shape = Rectangle 0,0, ([BG:W]-30) , ([BG:W]-150) | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
  X = ([L2:X]+5)
  Y = ([L2:Y]+35)
 
@@ -165,16 +165,6 @@
  X = ([L3:X])
  Y = ([L3:Y]+25)
 
-[TimeZone.txt]
- Meter = String
- MeasureName = TimeZone
- MeterStyle = FontStyle
- FontSize = (#SCREENAREAWIDTH#/150)
- FontWeight = 500
- Text = > Timezone : UTC%1
- X = ([L3:X])
- Y = ([SysInfo:Y]+35)
-
 [OSName.txt]
  Meter = String
  MeasureName = OSName
@@ -183,7 +173,7 @@
  FontWeight = 500
  Text = > OS : %1
  X = ([L3:X])
- Y = ([TimeZone.txt:Y]+35)
+ Y = ([SysInfo:Y]+35)
 
 [WiFi.txt]
  Meter = String
@@ -218,20 +208,20 @@
 [L4]
  Meter = Shape
  Shape = Rectangle 0,0,([BG:W]-20), 3 | Fill Color #HC# 
- Y = ([L3:Y]+240)
+ Y = ([L3:Y]+210)
  X = ([L1:X])
 
 [UserPFPContainer]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]/7),([BG:W]/7),([BG:W]/7) | Fill Color #HC#
+ Shape = Rectangle 0,0,([BG:W]/9),([BG:W]/9),([BG:W]/9) | Fill Color #HC#
  X = ([BG:X]+20)
- Y = ([BG:H]/1.07)
+ Y = ([BG:H]/1.056)
 
 [UserPFP]
  Meter = Image
  ImageName = #@#Images/PFP/PFP.png
  Container = UserPFPContainer
- W = ([BG:W]/7)
+ W = ([BG:W]/9)
  X = 0
  Y = 0
  LeftMouseUpAction = ["shell:AppsFolder\Windows.ImmersiveControlPanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel"]
@@ -244,8 +234,8 @@
  FontWeight = 700
  MeasureName = UserName
  Text = user/@%1
- X = ([UserPFPContainer:X]+70)
- Y = ([UserPFPContainer:Y]+15)
+ X = ([UserPFPContainer:X]+50)
+ Y = ([UserPFPContainer:Y]+10)
 
 ;------------------------------------------------;
 ;                     APPS                       ;
