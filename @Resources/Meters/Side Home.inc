@@ -13,7 +13,7 @@
 
 [BG]
  Meter = Shape
- Shape = Rectangle 0, 0, (#SCREENAREAWIDTH#/5), (#SCREENAREAHEIGHT#/1.17) , 0 | Fill Color #C1# | StrokeWidth 3 | Stroke Color #HC#
+ Shape = Rectangle 0, 0, (#SCREENAREAWIDTH#/5), (#SCREENAREAHEIGHT#/1.17) , 4 | Fill Color #C1# | StrokeWidth 3 | Stroke Color #HC#
  MouseActionCursor = 0
  X = 5
  Y = 5
@@ -39,7 +39,7 @@
 
 [L1]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]-20), 3 | Fill Color #HC# 
+ Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0 
  Y = ([TopText:Y]+40)
  X = 15
 
@@ -66,9 +66,9 @@
  X = ([L1:X]+105)
  Y = ([L1:Y]+38)
 
-[l2]
+[L2]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]-20), 3 | Fill Color #HC# 
+ Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0
  Y = ([TopText:Y]+325)
  X = ([L1:X])
 
@@ -78,81 +78,91 @@
  X = ([L2:X]+5)
  Y = ([L2:Y]+35)
 
-[CoverContainer]
- Meter = Shape 
- Shape = Rectangle 0,0, ([BG:W]/2.7), ([BG:W]/2),4 | Fill Color #HC#
- X = ([L2:X]+15)
- Y = ([L2:Y]+55)
+[Disk1Used]
+ Meter = Bar
+ MeterStyle = BarStyle
+ MeasureName = mDisk1Used
+ X = ([L2:X]+35)
+ Y = ([L2:Y]+100)
 
-[Cover.IMG]
- Meter = Image
- MeasureName = Cover
- W =  ([BG:W]/2.5)
- H = ([BG:W]/2)
- Container = CoverContainer
- Group = On
- AntiAlias = 1
-
-[Title.txt]
+[C.txt]
  Meter = String
- MeasureName = Title
  MeterStyle = FontStyle
- FontSize = (#SCREENAREAWIDTH#/170)
- FontWeight = 600
- X = ([Cover.IMG:X]+160)
- Y = ([Cover.IMG:Y]+40)
- W = ([PlayerBoundary:W]/2)
- ClipString = 1
- Group = On
- Text =  %1
+ MeasureName = mDisk1
+ FontSize = (#SCREENAREAWIDTH#/180)
+ FontWeight = 400
+ X = ([Disk1Used:X])
+ Y = ([Disk1Used:Y]-30)
+ Text = C Drive
 
-[Artist.txt]
+[Disk1.txt]
  Meter = String
- MeasureName = Artist
  MeterStyle = FontStyle
- FontSize = (#SCREENAREAWIDTH#/170)
- FontWeight = 500
- X = ([Title.txt:X])
- Y = ([Title.txt:Y]+25)
- W = ([PlayerBoundary:W]/2)
- ClipString = 1
- Group = On
- Text =  %1
+ MeasureName = mDisk1
+ FontSize = (#SCREENAREAWIDTH#/180)
+ FontWeight = 400
+ X = ([Disk1Used:X]+170)
+ Y = ([Disk1Used:Y]-30)
+ Text =  Total | %1 GB
 
-[PlayPause]
- Meter = Image
- ImageName = [StateButton]
- X = ([Artist.txt:X]+35)
- Y = ([Artist.txt:Y]+50)
- W = ([BG:W]/15)
- DynamicVariables = 1
- ImageTint = #HC#
- Group = On
- LeftMouseUpAction = [!CommandMeasure "StateButton" "PlayPause"]
+[Disk2Used]
+ Meter = Bar
+ MeterStyle = BarStyle
+ MeasureName = mDisk2Used
+ X = ([Disk1Used:X])
+ Y = ([Disk1Used:Y]+60)
 
-[Next]
- Meter = Image
- ImageName = #@#Images/Next4.png
- X = 40r
- Y = 0r
- W = ([PlayPause:W])
- ImageTint = #HC#
- Group = On
- LeftMouseUpAction = [!CommandMeasure "Title" "Next"]
+[D.txt]
+ Meter = String
+ MeterStyle = FontStyle
+ MeasureName = mDisk1
+ FontSize = (#SCREENAREAWIDTH#/180)
+ FontWeight = 400
+ X = ([Disk2Used:X])
+ Y = ([Disk2Used:Y]-30)
+ Text = D Drive
 
-[Prev]
- Meter = Image
- ImageName = #@#Images/Prev4.png
- X = -80r
- Y = 0r
- W = ([PlayPause:W])
- ImageTint = #HC#
- Group = On
- LeftMouseUpAction = [!CommandMeasure "Title" "Previous"]
+[Disk2.txt]
+ Meter = String
+ MeterStyle = FontStyle
+ MeasureName = mDisk2
+ FontSize = (#SCREENAREAWIDTH#/180)
+ FontWeight = 400
+ X = ([Disk2Used:X]+170)
+ Y = ([Disk2Used:Y]-30)
+ Text =  Total | %1 GB
+
+[Disk3Used]
+ Meter = Bar
+ MeterStyle = BarStyle
+ MeasureName = mDisk3Used
+ X = ([Disk1Used:X])
+ Y = ([Disk2Used:Y]+60)
+
+[E.txt]
+ Meter = String
+ MeterStyle = FontStyle
+ MeasureName = mDisk1
+ FontSize = (#SCREENAREAWIDTH#/180)
+ FontWeight = 400
+ X = ([Disk3Used:X])
+ Y = ([Disk3Used:Y]-30)
+ Text = E Drive
+
+[Disk3.txt]
+ Meter = String
+ MeterStyle = FontStyle
+ MeasureName = mDisk3
+ FontSize = (#SCREENAREAWIDTH#/180)
+ FontWeight = 400
+ X = ([Disk3Used:X]+170)
+ Y = ([Disk3Used:Y]-30)
+ Text =  Total | %1 GB
+
 
 [L3]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]-20), 3 | Fill Color #HC# 
+ Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0
  Y = ([TopText:Y]+625)
  X = ([L1:X])
 
@@ -207,7 +217,7 @@
 
 [L4]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]-20), 3 | Fill Color #HC# 
+ Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0
  Y = ([L3:Y]+210)
  X = ([L1:X])
 
@@ -241,11 +251,19 @@
 ;                     APPS                       ;
 ;------------------------------------------------;
 
+[App1Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([L1:X]+30)
+ Y = ([Pin.txt:Y]+50)
+
 [App1]
  Meter = Image
  ImageName = #Icon1#
- W = ([BG:W]/9)
- X = ([L1:X]+15)
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
+ W = ([BG:W]/11)
+ X = ([App1Holder:X]+7)
  Y = ([Pin.txt:Y]+60)
  AntiAlias = 1
  Group = G1
@@ -254,11 +272,20 @@
  MouseOverAction = [!SetOption App1 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App1 ImageAlpha "255"][!Update]
 ;-------------------------------------
+
+[App2Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App1Holder:X]+65)
+ Y = ([App1Holder:Y])
+
 [App2]
  Meter = Image
  ImageName = #Icon2#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App1:X]+75)
+ X = ([App2Holder:X]+7)
  Y = ([App1:Y])
  AntiAlias = 1
  Group = G2
@@ -267,11 +294,20 @@
  MouseOverAction = [!SetOption App2 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App2 ImageAlpha "255"][!Update]
 ;--------------------------------------
+
+[App3Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App2Holder:X]+65)
+ Y = ([App1Holder:Y])
+
 [App3]
  Meter = Image
  ImageName = #Icon3#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App2:X]+75)
+ X = ([App3Holder:X]+7)
  Y = ([App1:Y])
  AntiAlias = 1
  Group = G3
@@ -280,11 +316,20 @@
  MouseOverAction = [!SetOption App3 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App3 ImageAlpha "255"][!Update]
 ;----------------------------------------
+
+[App4Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App3Holder:X]+65)
+ Y = ([App1Holder:Y])
+
 [App4]
  Meter = Image
  ImageName = #Icon4#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App3:X]+75)
+ X = ([App4Holder:X]+7)
  Y = ([App1:Y])
  AntiAlias = 1
  Group = G4
@@ -293,11 +338,20 @@
  MouseOverAction = [!SetOption App4 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App4 ImageAlpha "255"][!Update]
 ;---------------------------------------
+
+[App5Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App4Holder:X]+65)
+ Y = ([App1Holder:Y])
+
 [App5]
  Meter = Image
  ImageName = #Icon5#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App4:X]+75)
+ X = ([App5Holder:X]+7)
  Y = ([App1:Y])
  AntiAlias = 1
  Group = G5
@@ -306,12 +360,21 @@
  MouseOverAction = [!SetOption App5 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App5 ImageAlpha "255"][!Update]
 ;---------------------------------------
+
+[App6Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App1Holder:X])
+ Y = ([App1Holder:Y]+80)
+
 [App6]
  Meter = Image
  ImageName = #Icon6#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App1:X])
- Y = ([App1:Y]+75)
+ X = ([App6Holder:X]+7)
+ Y = ([App1:Y]+80)
  AntiAlias = 1
  Group = G6
  DynamicVariables = 1
@@ -319,11 +382,20 @@
  MouseOverAction = [!SetOption App6 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App6 ImageAlpha "255"][!Update]
 ;---------------------------------------
+
+[App7Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App6Holder:X]+65)
+ Y = ([App6Holder:Y])
+
 [App7]
  Meter = Image
  ImageName = #Icon7#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App6:X]+75)
+ X = ([App7Holder:X]+7)
  Y = ([App6:Y])
  AntiAlias = 1
  Group = G7
@@ -332,11 +404,20 @@
  MouseOverAction = [!SetOption App7 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App7 ImageAlpha "255"][!Update]
 ;---------------------------------------
+
+[App8Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App7Holder:X]+65)
+ Y = ([App6Holder:Y])
+
 [App8]
  Meter = Image
  ImageName = #Icon8#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App7:X]+75)
+ X = ([App8Holder:X]+7)
  Y = ([App7:Y])
  AntiAlias = 1
  Group = G8
@@ -345,11 +426,20 @@
  MouseOverAction = [!SetOption App8 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App8 ImageAlpha "255"][!Update]
 ;---------------------------------------
+
+[App9Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App8Holder:X]+65)
+ Y = ([App6Holder:Y])
+
 [App9]
  Meter = Image
  ImageName = #Icon9#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App8:X]+75)
+ X = ([App9Holder:X]+7)
  Y = ([App8:Y])
  AntiAlias = 1
  Group = G9
@@ -358,11 +448,20 @@
  MouseOverAction = [!SetOption App9 ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption App9 ImageAlpha "255"][!Update]
 ;---------------------------------------
+
+[App10Holder]
+ Meter = Shape
+ Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
+ X = ([App9Holder:X]+65)
+ Y = ([App6Holder:Y])
+
 [App10]
  Meter = Image
  ImageName = #Icon10#
+;GreyScale = 1 
+ ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App9:X]+75)
+ X = ([App10Holder:X]+7)
  Y = ([App9:Y])
  AntiAlias = 1
  Group = G10

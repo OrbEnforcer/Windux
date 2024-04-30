@@ -47,6 +47,9 @@
  MaxValue = 100
  RegExpSubstitute=1
  Substitute = "-1":"00"
+ IfCondition = Volume.Measure = -1
+ IfTrueAction = [!SetOption Volume.IMG ImageName "#@#Images/Mute.png"]
+ IfFalseAction = [!SetOption Volume.IMG ImageName "#@#Images/Volume2.png"]
 
 [Language]
  Measure = Plugin

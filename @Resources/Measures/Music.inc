@@ -12,9 +12,9 @@
  PlayerType = Title
 
 [Artist]
-Measure = Plugin
-Plugin = WebNowPlaying
-PlayerType = Artist
+ Measure = Plugin
+ Plugin = WebNowPlaying
+ PlayerType = Artist
 
 [MProgress]
  Measure = Plugin
@@ -32,9 +32,29 @@ PlayerType = Artist
  PlayerType=State
  Substitute="0":"#@#Images/Play.png","1":"#@#Images/Pause.png","2":"#@#Images/Play.png"
 
-[Cover]
+[RepeatButton]
 Measure = Plugin
 Plugin = WebNowPlaying
-PlayerType = Cover
-DefaultPath = "#@#Images/Default.png"
-CoverPath = "#@#Images/Cover.png"
+PlayerType = Repeat
+IfCondition = RepeatButton = 0
+IfTrueAction = [!SetOption RepeatSong ImageName "#@#Images/NoRepeat.png"]
+IfCondition2 = RepeatButton = 1
+IfTrueAction2 = [!SetOption RepeatSong ImageName "#@#Images/Repeat1.png"]
+IfCondition3 = RepeatButton = 2
+IfTrueAction3 = [!SetOption RepeatSong ImageName "#@#Images/Repeat.png"]
+
+[ShuffleButton]
+Measure = Plugin
+Plugin = WebNowPlaying
+PlayerType = Shuffle
+IfCondition = ShuffleButton = 0
+IfTrueAction = [!SetOption ShuffleSong ImageName "#@#Images/ShuffleOff.png"]
+IfCondition2 = ShuffleButton = 1
+IfTrueAction2 = [!SetOption ShuffleSong ImageName "#@#Images/Shuffle.png"]
+
+[Cover]
+ Measure = Plugin
+ Plugin = WebNowPlaying
+ PlayerType = Cover
+ DefaultPath = "#@#Images/Default.png"
+ CoverPath = "#@#Images/Cover.png"

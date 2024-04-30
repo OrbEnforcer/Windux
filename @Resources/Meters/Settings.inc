@@ -1,10 +1,7 @@
-[Boundary]
- Meter = Shape
- Shape = Rectangle 0, 0, 550, 280, 4 | Fill Color #HC#
 
 [Holder]
  Meter = Shape
- Shape = Rectangle 5, 5, 540, 270, 3 | Fill Color #SC#
+ Shape = Rectangle 5, 5, 540, 270, 3 | Fill Color #SC# | StrokeWidth 3 | Stroke Color #HC#
  MouseOverAction = [!ShowMeter Mini]
  MouseLeaveAction = [!HideMeter Mini]
 
