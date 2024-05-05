@@ -2,7 +2,7 @@
  FontFace= JetBrains Mono Medium
  FontWeight = 900
  FontColor = #HC#
- FontSize=(#SCREENAREAWIDTH#/90)
+ FontSize=(2.5*#Scale#)
  AntiAlias=1
  SolidColor=0,0,0,1
  Padding=0,0,0,0
@@ -13,7 +13,7 @@
 
 [BG]
  Meter = Shape
- Shape = Rectangle 0, 0, (#SCREENAREAWIDTH#/5), (#SCREENAREAHEIGHT#/1.17) , 4 | Fill Color #C1# | StrokeWidth 3 | Stroke Color #HC#
+ Shape = Rectangle 0, 0, (38.5*#Scale#), (90*#Scale#) , 4 | Fill Color #C1# | StrokeWidth 3 | Stroke Color #HC#
  MouseActionCursor = 0
  X = 5
  Y = 5
@@ -26,83 +26,83 @@
  Meter = String
  MeterStyle = FontStyle 
  Text = Home
- X = ([BG:W]/2.4)
- Y = ([BG:Y]+25) 
+ X = (16*#Scale#)
+ Y = (1.3*#Scale#)
 
 [HomeIcon]
  Meter = Image
  ImageName = #@#Images/Home.png
  ImageTint = #HC#
- W = ([BG:W]/12)
- X = ([TopText:X]-40)
- Y = ([BG:Y]+25)
+ W = (3.5*#Scale#)
+ X = (12*#Scale#)
+ Y = (1.8*#Scale#)
 
 [L1]
  Meter = Shape
  Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0 
- Y = ([TopText:Y]+40)
- X = 15
+ Y = (6*#Scale#)
+ X = (1.5*#Scale#)
 
-[AppsBoudary]
+[AppsBoundary]
  Meter = Shape
- Shape = Rectangle 0,0, ([BG:W]-30) , ([BG:W]-150) | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
- X = ([L1:X]+5)
- Y = ([L1:Y]+25)
+ Shape = Rectangle 0,0, (36*#Scale#) , (24*#Scale#),4 | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
+ X = (1.8*#Scale#)
+ Y = (8*#Scale#)
 
 [Pin.txt]
  Meter = String
  MeterStyle = FontStyle 
  Text = Pinned
- FontSize = (#SCREENAREAWIDTH#/120)
+ FontSize = (1.5*#Scale#)
  FontWeight = 600
- X = ([L1:X]+135)
- Y = ([L1:Y]+35) 
+ X = (15.5*#Scale#)
+ Y = (9.5*#Scale#) 
 
 [Pin]
  Meter = Image
  ImageName = #@#Images/Pin.png
  ImageTint = #HC#
- W = ([BG:W]/16)
- X = ([L1:X]+105)
- Y = ([L1:Y]+38)
+ W = (2.5*#Scale#)
+ X = (12.5*#Scale#)
+ Y = (9.5*#Scale#)
 
 [L2]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0
- Y = ([TopText:Y]+325)
+ Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #HC# | StrokeWidth 0
+ Y = (33.5*#Scale#)
  X = ([L1:X])
 
-[PlayerBoundary]
+[StorageBoundary]
  Meter = Shape
- Shape = Rectangle 0,0, ([BG:W]-30) , ([BG:W]-150) | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
- X = ([L2:X]+5)
- Y = ([L2:Y]+35)
+ Shape = Rectangle 0,0, ([AppsBoundary:W]) , ([AppsBoundary:H]),4 | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
+ X = ([AppsBoundary:X])
+ Y = (35.5*#Scale#)
 
 [Disk1Used]
  Meter = Bar
  MeterStyle = BarStyle
  MeasureName = mDisk1Used
- X = ([L2:X]+35)
- Y = ([L2:Y]+100)
+ X = (4.8*#Scale#)
+ Y = (42.5*#Scale#)
 
 [C.txt]
  Meter = String
  MeterStyle = FontStyle
  MeasureName = mDisk1
- FontSize = (#SCREENAREAWIDTH#/180)
+ FontSize = (1.1*#Scale#)
  FontWeight = 400
  X = ([Disk1Used:X])
- Y = ([Disk1Used:Y]-30)
+ Y = (39.5*#Scale#)
  Text = C Drive
 
 [Disk1.txt]
  Meter = String
  MeterStyle = FontStyle
  MeasureName = mDisk1
- FontSize = (#SCREENAREAWIDTH#/180)
+ FontSize = (1.1*#Scale#)
  FontWeight = 400
- X = ([Disk1Used:X]+170)
- Y = ([Disk1Used:Y]-30)
+ X = (22.1*#Scale#)
+ Y = (39.5*#Scale#)
  Text =  Total | %1 GB
 
 [Disk2Used]
@@ -110,26 +110,26 @@
  MeterStyle = BarStyle
  MeasureName = mDisk2Used
  X = ([Disk1Used:X])
- Y = ([Disk1Used:Y]+60)
+ Y = (49*#Scale#)
 
 [D.txt]
  Meter = String
  MeterStyle = FontStyle
  MeasureName = mDisk1
- FontSize = (#SCREENAREAWIDTH#/180)
+ FontSize = (1.1*#Scale#)
  FontWeight = 400
  X = ([Disk2Used:X])
- Y = ([Disk2Used:Y]-30)
+ Y = (46*#Scale#)
  Text = D Drive
 
 [Disk2.txt]
  Meter = String
  MeterStyle = FontStyle
  MeasureName = mDisk2
- FontSize = (#SCREENAREAWIDTH#/180)
+ FontSize = (1.1*#Scale#)
  FontWeight = 400
- X = ([Disk2Used:X]+170)
- Y = ([Disk2Used:Y]-30)
+ X = (22.1*#Scale#)
+ Y = (46*#Scale#)
  Text =  Total | %1 GB
 
 [Disk3Used]
@@ -137,115 +137,112 @@
  MeterStyle = BarStyle
  MeasureName = mDisk3Used
  X = ([Disk1Used:X])
- Y = ([Disk2Used:Y]+60)
+ Y = (55*#Scale#)
 
 [E.txt]
  Meter = String
  MeterStyle = FontStyle
  MeasureName = mDisk1
- FontSize = (#SCREENAREAWIDTH#/180)
+ FontSize = (1.1*#Scale#)
  FontWeight = 400
  X = ([Disk3Used:X])
- Y = ([Disk3Used:Y]-30)
+ Y = (52*#Scale#)
  Text = E Drive
 
 [Disk3.txt]
  Meter = String
  MeterStyle = FontStyle
  MeasureName = mDisk3
- FontSize = (#SCREENAREAWIDTH#/180)
+ FontSize = (1.1*#Scale#)
  FontWeight = 400
- X = ([Disk3Used:X]+170)
- Y = ([Disk3Used:Y]-30)
+ X = (22.1*#Scale#)
+ Y = (52*#Scale#)
  Text =  Total | %1 GB
-
 
 [L3]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0
- Y = ([TopText:Y]+625)
+ Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #HC# | StrokeWidth 0
+ Y = (61.5*#Scale#)
  X = ([L1:X])
 
 [SysInfo]
  Meter = String
  MeterStyle = FontStyle
- FontSize = (#SCREENAREAWIDTH#/120)
+ FontSize = (1.5*#Scale#)
  FontWeight = 600
  Text = System Info
- X = ([L3:X])
- Y = ([L3:Y]+25)
+ X = (2*#Scale#)
+ Y = (63*#Scale#)
 
 [OSName.txt]
  Meter = String
  MeasureName = OSName
  MeterStyle = FontStyle
- FontSize = (#SCREENAREAWIDTH#/150)
+ FontSize = (1.2*#Scale#)
  FontWeight = 500
  Text = > OS : %1
- X = ([L3:X])
- Y = ([SysInfo:Y]+35)
+ X = (2*#Scale#)
+ Y = (67*#Scale#)
 
 [WiFi.txt]
  Meter = String
  MeasureName = Wifi.SSID
  MeterStyle = FontStyle
- FontSize = (#SCREENAREAWIDTH#/150)
+ FontSize = (1.2*#Scale#)
  FontWeight = 500
  Text = > WiFi : %1
- X = ([L3:X])
- Y = ([OSName.txt:Y]+35)
+ X = (2*#Scale#)
+ Y = (71*#Scale#)
 
 [Uptime.txt]
  Meter = String
  MeasureName = Uptime
  MeterStyle = FontStyle
- FontSize = (#SCREENAREAWIDTH#/150)
+ FontSize = (1.2*#Scale#)
  FontWeight = 500
  Text = > Uptime : %1
- X = ([L3:X])
- Y = ([Wifi.txt:Y]+35)
+ X = (2*#Scale#)
+ Y = (75*#Scale#)
 
 [Idle.txt]
  Meter = String
  MeasureName = Idle
  MeterStyle = FontStyle
- FontSize = (#SCREENAREAWIDTH#/150)
+ FontSize = (1.2*#Scale#)
  FontWeight = 500
  Text = > Idle Since : %1 seconds
- X = ([L3:X])
- Y = ([Uptime.txt:Y]+35)
+ X = (2*#Scale#)
+ Y = (79*#Scale#)
 
 [L4]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0
- Y = ([L3:Y]+210)
+ Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #HC# | StrokeWidth 0
+ Y = (82.5*#Scale#)
  X = ([L1:X])
 
 [UserPFPContainer]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]/9),([BG:W]/9),([BG:W]/9) | Fill Color #HC#
- X = ([BG:X]+20)
- Y = ([BG:H]/1.056)
+ Shape = Rectangle 0,0,(5*#Scale#),(5*#Scale#),(5*#Scale#) | Fill Color #HC#
+ Y = (84*#Scale#)
+ X = (1.5*#Scale#)
 
 [UserPFP]
  Meter = Image
  ImageName = #@#Images/PFP/PFP.png
  Container = UserPFPContainer
- W = ([BG:W]/9)
- X = 0
- Y = 0
+ W = (5*#Scale#)
  LeftMouseUpAction = ["shell:AppsFolder\Windows.ImmersiveControlPanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel"]
 
 [User]
  Meter = String
  MeterStyle = FontStyle
  StringCase = None
- FontSize = (#SCREENAREAWIDTH#/150)
+ FontSize = (1.2*#Scale#)
  FontWeight = 700
  MeasureName = UserName
  Text = user/@%1
- X = ([UserPFPContainer:X]+50)
- Y = ([UserPFPContainer:Y]+10)
+ X = (8*#Scale#)
+ Y = (85.5*#Scale#)
 
 ;------------------------------------------------;
 ;                     APPS                       ;
@@ -253,18 +250,18 @@
 
 [App1Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([L1:X]+30)
- Y = ([Pin.txt:Y]+50)
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (3.2*#Scale#)
+ Y = (15*#Scale#)
 
 [App1]
  Meter = Image
  ImageName = #Icon1#
-;GreyScale = 1 
+ ;GreyScale = 1 
  ;ImageTint = #HC#,100
- W = ([BG:W]/11)
- X = ([App1Holder:X]+7)
- Y = ([Pin.txt:Y]+60)
+ W = (3.5*#Scale#)
+ X = (4.1*#Scale#)
+ Y = (16*#Scale#)
  AntiAlias = 1
  Group = G1
  DynamicVariables = 1
@@ -275,9 +272,9 @@
 
 [App2Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App1Holder:X]+65)
- Y = ([App1Holder:Y])
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (10.5*#Scale#)
+ Y = (15*#Scale#)
 
 [App2]
  Meter = Image
@@ -285,8 +282,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App2Holder:X]+7)
- Y = ([App1:Y])
+ X = (11.3*#Scale#)
+ Y = (16*#Scale#)
  AntiAlias = 1
  Group = G2
  DynamicVariables = 1
@@ -297,9 +294,9 @@
 
 [App3Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App2Holder:X]+65)
- Y = ([App1Holder:Y])
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (17.5*#Scale#)
+ Y = (15*#Scale#)
 
 [App3]
  Meter = Image
@@ -307,8 +304,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App3Holder:X]+7)
- Y = ([App1:Y])
+ X = (18.2*#Scale#)
+ Y = (16*#Scale#)
  AntiAlias = 1
  Group = G3
  DynamicVariables = 1
@@ -319,9 +316,9 @@
 
 [App4Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App3Holder:X]+65)
- Y = ([App1Holder:Y])
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (24.5*#Scale#)
+ Y = (15*#Scale#)
 
 [App4]
  Meter = Image
@@ -329,8 +326,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App4Holder:X]+7)
- Y = ([App1:Y])
+ X = (25.2*#Scale#)
+ Y = (16*#Scale#)
  AntiAlias = 1
  Group = G4
  DynamicVariables = 1
@@ -341,9 +338,9 @@
 
 [App5Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App4Holder:X]+65)
- Y = ([App1Holder:Y])
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (31.5*#Scale#)
+ Y = (15*#Scale#)
 
 [App5]
  Meter = Image
@@ -351,8 +348,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App5Holder:X]+7)
- Y = ([App1:Y])
+ X = (32.2*#Scale#)
+ Y = (16*#Scale#)
  AntiAlias = 1
  Group = G5
  DynamicVariables = 1
@@ -363,9 +360,9 @@
 
 [App6Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App1Holder:X])
- Y = ([App1Holder:Y]+80)
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (3.2*#Scale#)
+ Y = (24*#Scale#)
 
 [App6]
  Meter = Image
@@ -373,8 +370,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App6Holder:X]+7)
- Y = ([App1:Y]+80)
+ X = (4.1*#Scale#)
+ Y = (25*#Scale#)
  AntiAlias = 1
  Group = G6
  DynamicVariables = 1
@@ -385,9 +382,9 @@
 
 [App7Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App6Holder:X]+65)
- Y = ([App6Holder:Y])
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (10.5*#Scale#)
+ Y = (24*#Scale#)
 
 [App7]
  Meter = Image
@@ -395,8 +392,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App7Holder:X]+7)
- Y = ([App6:Y])
+ X = (11.3*#Scale#)
+ Y = (25*#Scale#)
  AntiAlias = 1
  Group = G7
  DynamicVariables = 1
@@ -407,9 +404,9 @@
 
 [App8Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App7Holder:X]+65)
- Y = ([App6Holder:Y])
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (17.5*#Scale#)
+ Y = (24*#Scale#)
 
 [App8]
  Meter = Image
@@ -417,8 +414,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App8Holder:X]+7)
- Y = ([App7:Y])
+ X = (18.2*#Scale#)
+ Y = (25*#Scale#)
  AntiAlias = 1
  Group = G8
  DynamicVariables = 1
@@ -429,9 +426,9 @@
 
 [App9Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App8Holder:X]+65)
- Y = ([App6Holder:Y])
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (24.5*#Scale#)
+ Y = (24*#Scale#)
 
 [App9]
  Meter = Image
@@ -439,8 +436,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App9Holder:X]+7)
- Y = ([App8:Y])
+ X = (25.2*#Scale#)
+ Y = (25*#Scale#)
  AntiAlias = 1
  Group = G9
  DynamicVariables = 1
@@ -451,9 +448,9 @@
 
 [App10Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Size# * 50), (#Size# * 55), (#Size# * 5) | StrokeWidth 0 | Fill Color #HC#,25
- X = ([App9Holder:X]+65)
- Y = ([App6Holder:Y])
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ X = (31.5*#Scale#)
+ Y = (24*#Scale#)
 
 [App10]
  Meter = Image
@@ -461,8 +458,8 @@
 ;GreyScale = 1 
  ;ImageTint = #HC#,100
  W = ([App1:W])
- X = ([App10Holder:X]+7)
- Y = ([App9:Y])
+ X = (32.2*#Scale#)
+ Y = (25*#Scale#)
  AntiAlias = 1
  Group = G10
  DynamicVariables = 1

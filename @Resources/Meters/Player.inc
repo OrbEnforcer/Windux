@@ -31,15 +31,15 @@
 
 [CoverContainer]
  Meter = Shape 
- Shape = Rectangle 0,0, (0.6*([BG:W]/10)*#Scale#), (0.6*([BG:W]/10)*#Scale#),4 | Fill Color #HC#
- X = (11.1*#Scale#)
- Y = (5*#Scale#)
+ Shape = Rectangle 0,0, (18*#Scale#), (18*#Scale#),4 | Fill Color #HC#
+ X = (10.5*#Scale#)
+ Y = (6*#Scale#)
 
 [Cover.IMG]
  Meter = Image
  MeasureName = Cover
- W = (0.6*([BG:W]/10)*#Scale#)
- H = (0.6*([BG:W]/10)*#Scale#)
+ W = (18*#Scale#)
+ H = (18*#Scale#)
  Container = CoverContainer
  Group = On
  AntiAlias = 1
@@ -102,7 +102,7 @@
 [Next]
  Meter = Image
  ImageName = #@#Images/Next4.png
- X = 40r
+ X = (24*#Scale#)
  Y = 0r
  W = ([PlayPause:W])
  ImageTint = #HC#
@@ -112,7 +112,7 @@
 [Prev]
  Meter = Image
  ImageName = #@#Images/Prev4.png
- X = -80r
+ X = (12*#Scale#)
  Y = 0r
  W = ([PlayPause:W])
  ImageTint = #HC#
@@ -121,7 +121,7 @@
 
 [RepeatSong]
  Meter = Image
- X = -40r
+ X = (6*#Scale#)
  Y = 0r
  W = ([PlayPause:W])
  ImageTint = #HC#
@@ -130,7 +130,7 @@
 
 [ShuffleSong]
  Meter = Image
- X = 160r
+ X = (30*#Scale#)
  Y = 0r
  W = ([PlayPause:W])
  ImageTint = #HC#

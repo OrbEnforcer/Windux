@@ -2,8 +2,8 @@
  BarOrientation = Horizontal
  BarColor = #C1#
  SolidColor = #HC#
- W = ([L2:W]-75)
- H = ([L2:H]+8)
+ W = (30*#Scale#)
+ H = (1*#Scale#)
  BevelType = 2
  BevelColor = #HC#
  BevelColor2 = #HC#
