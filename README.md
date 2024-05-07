@@ -19,5 +19,7 @@
 -  Winfetch without using terminal
 -  ~~A custom start menu that opens instead of windows start menu when you click on home on bars~~
 -  ~~File Explorer for desktop~~
-
+- Vertical Windux Bar
+- Segmented Windux Bar
+  
 
