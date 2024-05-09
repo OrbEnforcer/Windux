@@ -23,17 +23,6 @@
  Drive = C:
  InvertMeasure = 1
 
-[UsedDriveSize1]
- measure = Calc
- dynamicVariables = 1
- formula = ([mDisk1]-[Disk1UsedGB])
- 
-
-[mDisk2Used]
- Measure = FreeDiskSpace
- Drive = D:
- InvertMeasure = 1
-
 [mmDisk2]
  Measure = FreeDiskSpace
  Drive = D:
@@ -44,9 +33,9 @@
  dynamicVariables = 1
  formula = ([mmDisk2]/1000000000)
 
-[mDisk3Used]
+[mDisk2Used]
  Measure = FreeDiskSpace
- Drive = E:
+ Drive = D:
  InvertMeasure = 1
 
 [mmDisk3]
@@ -58,3 +47,8 @@
  measure = Calc
  dynamicVariables = 1
  formula = ([mmDisk3]/1000000000)
+
+[mDisk3Used]
+ Measure = FreeDiskSpace
+ Drive = E:
+ InvertMeasure = 1

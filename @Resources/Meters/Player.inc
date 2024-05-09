@@ -32,7 +32,7 @@
 [CoverContainer]
  Meter = Shape 
  Shape = Rectangle 0,0, (18*#Scale#), (18*#Scale#),4 | Fill Color #HC#
- X = (10.5*#Scale#)
+ X = (10.7*#Scale#)
  Y = (6*#Scale#)
 
 [Cover.IMG]
@@ -41,6 +41,7 @@
  W = (18*#Scale#)
  H = (18*#Scale#)
  Container = CoverContainer
+ PreserveAspectRatio = 1
  Group = On
  AntiAlias = 1
 

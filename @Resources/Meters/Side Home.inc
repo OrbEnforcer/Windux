@@ -13,7 +13,7 @@
 
 [BG]
  Meter = Shape
- Shape = Rectangle 0, 0, (38.5*#Scale#), (90*#Scale#) , 4 | Fill Color #C1# | StrokeWidth 3 | Stroke Color #HC#
+ Shape = Rectangle 0, 0, (38.5*#Scale#), (90*#Scale#) , 4 | Fill Color #C1# | StrokeWidth 2 | Stroke Color #HC#
  MouseActionCursor = 0
  X = 5
  Y = 5
@@ -231,6 +231,7 @@
  ImageName = #@#Images/PFP/PFP.png
  Container = UserPFPContainer
  W = (5*#Scale#)
+ ImageTint = #HC#
  LeftMouseUpAction = ["shell:AppsFolder\Windows.ImmersiveControlPanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel"]
 
 [User]

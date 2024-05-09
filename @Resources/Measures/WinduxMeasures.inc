@@ -46,15 +46,28 @@
  MinValue = 0
  MaxValue = 100
  RegExpSubstitute=1
- Substitute = "-1":"00"
+ Substitute = "-1":"0"
  IfCondition = Volume.Measure = -1
+ IfCondition2 = Volume.Measure = 0
  IfTrueAction = [!SetOption Volume.IMG ImageName "#@#Images/Mute.png"]
  IfFalseAction = [!SetOption Volume.IMG ImageName "#@#Images/Volume2.png"]
-
+ IfTrueAction2 = [!SetOption Volume.IMG ImageName "#@#Images/Mute.png"]
+ IfFalseAction2 = [!SetOption Volume.IMG ImageName "#@#Images/Volume2.png"]
+ 
 [Language]
  Measure = Plugin
  Plugin = PowerShellRM
  Line = Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.InputLanguage]::CurrentInputLanguage.Culture.DisplayName
+
+[AppDrawerX]
+Measure=Calc
+Formula=([DD:XW])
+DynamicVariables=1
+
+[AppDrawerY]
+Measure=Calc
+Formula=([DD:XW])
+DynamicVariables=1
 
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
@@ -146,7 +159,7 @@ Parent = MeasureAudio
 Type = Band
 BandIdx = 10
 
-[Band10]
+[Band11]
 Measure = Plugin
 Plugin = AudioLevel
 Parent = MeasureAudio
