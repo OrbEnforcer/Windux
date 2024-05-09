@@ -4,7 +4,7 @@
 **NOTE - SKIN BEST WORKS ON 1920 x 1080 resolution screen**
 
 ### PREVIEW
-#### Version 3.1
+#### Version 3.1 (WIP) 
 ![2024-05-07](https://github.com/OrbEnforcer/Windux/assets/108188721/6d58ce44-8130-40ba-8638-2a64547f6976)
 
 ![2024-05-07 (3)](https://github.com/OrbEnforcer/Windux/assets/108188721/1b282c65-44aa-44bf-8ee3-a0b41367132a)
