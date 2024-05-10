@@ -56,5 +56,5 @@ IfTrueAction2 = [!SetOption ShuffleSong ImageName "#@#Images/Shuffle.png"]
  Measure = Plugin
  Plugin = WebNowPlaying
  PlayerType = Cover
- DefaultPath = "#@#Images/Default.png"
- CoverPath = "#@#Images/Cover.png"
+ DefaultPath = "#@#Images/WNP/Default.png"
+ CoverPath = "#@#Images/WNP/Cover.png"
