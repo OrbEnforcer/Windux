@@ -4,7 +4,7 @@
 **NOTE - WINDUX BAR CURRENTLY WORKS BEST ON 1920×1080 SCREENS**
 
 ### PREVIEW
-#### Version 3.1 (WIP) 
+#### Version 3.1
 ![2024-05-07](https://github.com/OrbEnforcer/Windux/assets/108188721/6d58ce44-8130-40ba-8638-2a64547f6976)
 
 ![2024-05-07 (3)](https://github.com/OrbEnforcer/Windux/assets/108188721/1b282c65-44aa-44bf-8ee3-a0b41367132a)
