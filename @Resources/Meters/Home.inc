@@ -48,6 +48,7 @@
 [UserPFP]
  Meter = Image
  ImageName = #@#Images/PFP/PFP.png
+ ImageTint = #HC#
  Container = UserPFPContainer
  W = ([BG:W]/30)
  X = 0
