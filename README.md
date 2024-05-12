@@ -3,7 +3,15 @@
 ## Just a bunch of random ideas I took from reddit or other OS and tried to get them on windows through rainmeter.
 **NOTE - WINDUX BAR CURRENTLY WORKS BEST ON 1920×1080 SCREENS**
 
+
+
+
 ### PREVIEW
+#### Version 3.2 - Work In Progress Segmendux and new Home style
+![2024-05-12 (2)](https://github.com/OrbEnforcer/Windux/assets/108188721/7d79ceda-341e-4d28-a198-b132a33b89e7)
+
+
+
 #### Version 3.1
 ![2024-05-07](https://github.com/OrbEnforcer/Windux/assets/108188721/6d58ce44-8130-40ba-8638-2a64547f6976)
 
