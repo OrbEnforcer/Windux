@@ -31,14 +31,14 @@
 
 
 ## TO DO
--  Browser for Windux Bar
--  ~~Custom Skin Menu~~
--  Being able to change element positions on the linux bar or turn them on/off
--  ~~A better dock than my previous one~~
--  Winfetch without using terminal
--  ~~A custom start menu that opens instead of windows start menu when you click on home on bars~~
--  ~~File Explorer for desktop~~
-- Vertical Windux Bar
-- Segmented Windux Bar
+- [ ]  Browser for Windux Bar
+- [x] Custom Skin Menu
+- [ ] Being able to change element positions on the linux bar or turn them on/off
+- [x] A better dock than my previous one
+- [ ] Winfetch without using terminal
+- [x] A custom start menu that opens instead of windows start menu when you click on home on bars
+- [x] File Explorer for desktop
+- [ ] Vertical Windux Bar
+- [x] Segmented Windux Bar
   
 
