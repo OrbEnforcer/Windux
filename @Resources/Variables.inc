@@ -1,10 +1,10 @@
 [Variables]
 
 ;BAR COLORS 
-C1 =33,39,58
+C1 =29,29,43
 C2 =165,247,124
 C3 =33,39,58
-C4 =139,164,199 
+C4 =203,166,247 
 C5 =46,52,64
 C6 =135,112,204
 C7 =27,27,41
@@ -16,7 +16,7 @@ C10 =27,27,41
 SC = #C1#,245
 
 ;COMMON COLOR 
-HC =139,164,199
+HC =203,166,247
 
 ;TIME FORMAT
 TF =Time.12Hr
@@ -35,9 +35,17 @@ S24H =1
 ;BAR HEIGHT 
 Size = 1.0
 
+;BROWSER
+Browser = OperaGX
 
+;SEARCH ENGINE
+Bing = "www.bing.com"
+Google = "www.google.com"
 
-
+;TERMINUX
+command =$UserInput$ 
+WindowWidth = 189
+WindowWidth2 = 85
 
 Scale = 10
 ScrollMouseIncrement = 0.05

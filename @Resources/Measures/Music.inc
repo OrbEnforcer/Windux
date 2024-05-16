@@ -16,6 +16,11 @@
  Plugin = WebNowPlaying
  PlayerType = Artist
 
+[PlayerName]
+ Measure = Plugin
+ Plugin = WebNowPlaying
+ PlayerType = Player
+
 [MProgress]
  Measure = Plugin
  Plugin = WebNowPlaying

@@ -59,16 +59,27 @@
  Plugin = PowerShellRM
  Line = Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.InputLanguage]::CurrentInputLanguage.Culture.DisplayName
 
-[AppDrawerX]
-Measure=Calc
-Formula=([DD:XW])
-DynamicVariables=1
+[WiFi]
+ Measure=WiFiStatus
+ WiFiInfoType=Quality
+ IfCondition = WiFi = 0
+ IfTrueAction = [!SetOption WiFi.IMG ImageName "#@#Images/WifiOff.png"]
+ IfCondition2 = WiFi >= 25 
+ IfTrueAction2 = [!SetOption WiFi.IMG ImageName "#@#Images/Wifi25.png"]
+ IfCondition3 = WiFi >= 50
+ IfTrueAction3 = [!SetOption WiFi.IMG ImageName "#@#Images/Wifi50.png"]
+ IfCondition4 = WiFi >= 75
+ IfTrueAction4 = [!SetOption WiFi.IMG ImageName "#@#Images/Wifi75.png"] 
+ IfCondition5 = WiFi >= 90
+ IfTrueAction5 =  [!SetOption WiFi.IMG ImageName "#@#Images/Wifi100.png"]
 
-[AppDrawerY]
-Measure=Calc
-Formula=([DD:XW])
-DynamicVariables=1
-
+[Active.Measure]
+ Measure = Plugin
+ Plugin = GetActiveTitle
+ IfCondition = Active.Measure = 0
+ IfTrueAction = [!SetOption Bands Hidden "0" ]
+ IfFalseAction = [!SetOption Bands Hidden "1"]
+ Substitute = "C:\Users\shwet\OneDrive\Documents\Rainmeter\Skins\All Linux tests\Terminal\terminal.ini" : "Windux Terminal"
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
