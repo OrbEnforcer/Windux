@@ -79,7 +79,7 @@
  IfCondition = Active.Measure = 0
  IfTrueAction = [!SetOption Bands Hidden "0" ]
  IfFalseAction = [!SetOption Bands Hidden "1"]
- Substitute = "C:\Users\shwet\OneDrive\Documents\Rainmeter\Skins\All Linux tests\Terminal\terminal.ini" : "Windux Terminal"
+
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
