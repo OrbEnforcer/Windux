@@ -1,8 +1,7 @@
 # Windux
-<p>
-  <img src = "@Resources/Windux2.png">
-</p>
 
+
+![GitHub Image](@Resources/Windux2.png) 
 
 
 
