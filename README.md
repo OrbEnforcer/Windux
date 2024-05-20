@@ -1,4 +1,10 @@
 # Windux
+<p>
+  <img src = "@Resources/Windux2.png">
+</p>
+
+
+
 
 ## Just a bunch of random ideas I took from reddit or other OS and tried to get them on windows through rainmeter.
 **NOTE - WINDUX BAR CURRENTLY WORKS BEST ON 1920×1080 SCREENS**
