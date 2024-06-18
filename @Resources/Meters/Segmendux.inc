@@ -86,16 +86,16 @@
  MouseLeaveAction = [!SetOption Home ImageAlpha "255"][!Update]
  LeftMouseUpAction = [!ToggleConfig "Windux\Home\Home" "Home Mini.ini"]
 
-[Refresh]
+[Terminux]
  Meter = Image
- ImageName = #@#Images/Refresh.png
+ ImageName = #@#Images/Terminal3.png
  ImageTint = #C1#
  W = ([Clock.IMG:W])
  X = (4 * #Scale#)r
  Y = (0.9 * #Scale#)
- MouseOverAction = [!SetOption Refresh ImageAlpha "160"][!Update]
- MouseLeaveAction = [!SetOption Refresh ImageAlpha "255"][!Update]
- LeftMouseUpAction = [!Refresh *]
+ MouseOverAction = [!SetOption Terminux ImageAlpha "160"][!Update]
+ MouseLeaveAction = [!SetOption Terminux ImageAlpha "255"][!Update]
+ LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Terminux" "Terminux.ini"]
 
 [BarSegment3]
  Meter = Shape

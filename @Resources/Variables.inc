@@ -1,12 +1,12 @@
 [Variables]
 
 ;BAR COLORS 
-C1 =29,29,43
+C1 =24,24,37
 C2 =165,247,124
-C3 =33,39,58
-C4 =203,166,247 
-C5 =46,52,64
-C6 =135,112,204
+C3 =173,173,204
+C4 =245,138,71 
+C5 =203,166,247
+C6 =243, 139, 168
 C7 =27,27,41
 C8 =165,247,124
 C9 =20,20,32
@@ -16,7 +16,12 @@ C10 =27,27,41
 SC = #C1#,245
 
 ;COMMON COLOR 
-HC =203,166,247
+HC =137,180,250
+
+;MISC COLORS
+Spotippucin Green = 166,227,161
+Surface = 49, 50, 68
+Base = 30,30,46
 
 ;TIME FORMAT
 TF =Time.12Hr
@@ -44,8 +49,11 @@ Google = "www.google.com"
 
 ;TERMINUX
 command =$UserInput$ 
-WindowWidth = 189
+WindowWidth = 180
 WindowWidth2 = 85
+WindowHeight1 = 98
+WindowHeight2 = 48 
 
+;GLOBAL VARS
 Scale = 10
 ScrollMouseIncrement = 0.05

@@ -16,7 +16,7 @@
 [Wifi.SSID]
  Measure = WiFiStatus
  WiFiInfoType = SSID
- Substitute = "-1":" Disconnected "
+ Substitute = "-1":"Disconnected"
 
 [Uptime]
  Measure = Uptime

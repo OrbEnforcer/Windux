@@ -1,7 +1,7 @@
 [Variables]
 
 Icon1=C:\Users\shwet\OneDrive\Documents\Rainmeter\Skins\Windux\Home\IconCache\Opera GX Browser _exe.png
-Name1=Opera GX Browser 
+Name1=Opera GX Browser  
 WholePath1=["C:\Users\shwet\AppData\Local\Programs\Opera GX\launcher.exe"]
 Icon2=C:\Users\shwet\OneDrive\Documents\Rainmeter\Skins\Windux\Home\IconCache\Vivaldi_exe.png
 Name2=Vivaldi
