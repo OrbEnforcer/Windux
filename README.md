@@ -6,6 +6,10 @@
 ### PREVIEW
 #### Version 3.2 - Work In Progress Segmendux and new Home style
 
+![Screenshot 2024-06-18 171129](https://github.com/OrbEnforcer/Windux/assets/108188721/2a5ca0a1-1a68-4f9d-b025-ef71bc7b43bb)
+
+![2024-06-18 (3)](https://github.com/OrbEnforcer/Windux/assets/108188721/17d89bb3-2460-4df5-8e06-c992023f6cbf)
+
 https://github.com/OrbEnforcer/Windux/assets/108188721/4ef8c37f-f2c5-4e68-8b15-c05c36002f08
 
 ![2024-05-12 (2)](https://github.com/OrbEnforcer/Windux/assets/108188721/7d79ceda-341e-4d28-a198-b132a33b89e7)
