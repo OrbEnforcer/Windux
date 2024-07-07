@@ -168,7 +168,6 @@
  Text =  %1 
  LeftMouseUpAction = [!CommandMeasure "StateButton" "PlayPause"]
 
-[Next]
  Meter = Image
  ImageName = #@#Images/Next5.png
  X = (114 * #Scale#)
