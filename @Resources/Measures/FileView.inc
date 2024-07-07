@@ -3,6 +3,7 @@
  X = (45 * #Scale#)
  Y = (7.3 * #Scale#)r
  AntiAlias = 1
+ ImageTint = #HC#
  Group = FVG
 
 [HighlightStyle]
@@ -78,12 +79,13 @@
 
 [mIndex1Icon]
  Measure = Plugin
-Plugin = FileView
-Path = [mPath]
-Type = Icon
-IconSize = #IconSize#
-Index = 1
-Group = Children
+ Plugin = FileView
+ Path = [mPath]
+ Type = Icon
+ IconSize = #IconSize#
+ Index = 1
+ Group = Children
+ Substitute= "icon1.ico" : "File.ico"
 
 ;-------;
 ;Index 2;
@@ -121,6 +123,7 @@ Group = Children
  IconSize = #IconSize#
  Index = 2
  Group = Children
+ Substitute= "icon2.ico" : "File.ico"
 
 ;-------;
 ;Index 3;
@@ -158,6 +161,7 @@ Group = Children
  IconSize = #IconSize#
  Index = 3
  Group = Children
+ Substitute= "icon3.ico" : "File.ico"
 
 ;-------;
 ;Index 4;
@@ -195,6 +199,7 @@ Group = Children
  IconSize = #IconSize#
  Index = 4
  Group = Children
+ Substitute= "icon4.ico" : "File.ico"
 
 ;-------;
 ;Index 5;
@@ -232,6 +237,7 @@ Group = Children
  IconSize = #IconSize#
  Index = 5
  Group = Children
+ Substitute= "icon5.ico" : "File.ico"
 
 ;-------;
 ;Index 6;
@@ -269,3 +275,4 @@ Group = Children
  IconSize = #IconSize#
  Index = 6
  Group = Children
+ Substitute= "icon6.ico" : "File.ico"

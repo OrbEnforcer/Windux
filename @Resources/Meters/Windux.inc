@@ -31,7 +31,7 @@
  MouseOverAction = [!SetOption Terminux ImageAlpha "160"][!Update]
  MouseLeaveAction = [!SetOption Terminux ImageAlpha "255"][!Update]
  ;LeftMouseUpAction = [!Refresh *]
- LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Terminux" "Terminux.ini"]
+ LeftMouseUpAction = ["wt.exe"]
 
 [Divider1]
  Meter = String
@@ -166,6 +166,7 @@
  InLineSetting = Size | (1.1 * #Scale#)
  Group = On
  Text =  %1 
+ LeftMouseUpAction = [!CommandMeasure "StateButton" "PlayPause"]
 
 [Next]
  Meter = Image
@@ -428,6 +429,85 @@
  MouseOverAction = [!SetOption Row1 SolidColor "#Base#"][!Update]
  MouseLeaveAction = [!SetOption Row1 SolidColor ""][!Update]
  LeftMouseUpAction = [!ToggleMeterGroup FVG]
+
+[Box]
+ Meter = Shape
+ Shape = Rectangle 0,0, (38 * #Scale#), (8 * #Scale#), 4 | Extend BGStyle
+ BGStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color #Base#,1
+ X = (1.5 * #Scale#)
+ Y = (18 * #Scale#) 
+ Group = HMG
+
+[Pinned.txt]
+ Meter = String
+ MeterStyle = FontStyle
+ Text = Pinned
+ StringAlign = Center
+ Group = HMG
+ SolidColor = #C1#
+ W = (10 * #Scale#)
+ X = (7 * #Scale#)
+ Y = (16 * #Scale#)
+
+[BrowserBG]
+ Meter = Shape
+ Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
+ BGStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
+ X = (3 * #Scale#)
+ Y = (19.5 * #Scale#)
+ Group = HMG
+
+[Browser]
+ Meter = Image
+ ImageName = #@#Images/Browsers/#Browser#
+ ImageTint = #C5#
+ W = (3 * #Scale#)
+ X = (1 * #Scale#)r
+ Y = (1 * #Scale#)r
+ MouseOverAction = [!SetOption BrowserBG BGStyle "StrokeWidth 2 | Stroke Color #Base# | Fill Color #Base#"][!Update]
+ MouseLeaveAction = [!SetOption BrowserBG BGStyle "StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1"][!Update]
+ LeftMouseUpAction = [https://]
+ Group = HMG
+
+[VSBG]
+ Meter = Shape
+ Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
+ BGStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
+ X = (9 * #Scale#)
+ Y = ([BrowserBG:Y])
+ Group = HMG
+
+[VS]
+ Meter = Image
+ ImageName = #@#Images/Apps/VS Code
+ ImageTint = #C5#
+ W = (3 * #Scale#)
+ X = (1 * #Scale#)r
+ Y = (1 * #Scale#)r
+ MouseOverAction = [!SetOption VSBG BGStyle "StrokeWidth 2 | Stroke Color #Base# | Fill Color #Base#"][!Update]
+ MouseLeaveAction = [!SetOption VSBG BGStyle "StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1"][!Update]
+ LeftMouseUpAction = ["E:\Microsoft VS Code\Code.exe"]
+ Group = HMG
+
+[SpotiBG]
+ Meter = Shape
+ Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
+ BGStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
+ X = (15 * #Scale#)
+ Y = ([BrowserBG:Y])
+ Group = HMG
+
+[Spoti]
+ Meter = Image
+ ImageName = #@#Images/Apps/Spotify
+ ImageTint = #C5#
+ W = (3 * #Scale#)
+ X = (1 * #Scale#)r
+ Y = (1 * #Scale#)r
+ MouseOverAction = [!SetOption SpotiBG BGStyle "StrokeWidth 2 | Stroke Color #Base# | Fill Color #Base#"][!Update]
+ MouseLeaveAction = [!SetOption SpotiBG BGStyle "StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1"][!Update]
+ LeftMouseUpAction = ["C:\Users\shwet\AppData\Roaming\Spotify\Spotify.exe"]
+ Group = HMG
 
 ;--------;
 ;EXPLORER;

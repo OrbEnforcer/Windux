@@ -30,7 +30,12 @@
  Measure = Plugin
  Plugin = WebNowPlaying
  PlayerType = Duration
- 
+
+[MProgressBar]
+ Measure = Plugin
+ Plugin = WebNowPlaying
+ PlayerType = Progress
+
 [StateButton]
  Measure=Plugin
  Plugin=WebNowPlaying

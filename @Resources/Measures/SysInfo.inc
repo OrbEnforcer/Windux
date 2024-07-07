@@ -42,3 +42,25 @@
  Measure=Plugin
  Plugin=CoreTemp
  CoreTempType=MaxTemperature  
+
+[Host]
+  Measure = Plugin
+  Plugin = SysInfo
+  SysInfoType = HOST_NAME
+
+[MemoryByte]
+ Measure = PhysicalMemory
+ Total = 1 
+
+[Memory]
+ Measure = Calc
+ Formula = ([MemoryByte]/1000000000)
+
+[UsedMemoryByte]
+ Measure = PhysicalMemory
+ InvertMeasure = 1
+
+[UsedMemory]
+ Measure = Calc
+ DynamicVariables = 1
+ Formula = ([UsedMemoryByte]/1000000000)

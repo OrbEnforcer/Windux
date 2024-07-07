@@ -1,45 +1,29 @@
-[FontStyle]
- FontFace = JetBrains Mono
- FontSize = (1.5*#Scale#)
- FontColor = #HC#
- StringAlign = Center
- AntiAlias = 1
- SolidColor = 0,0,0,1
- Padding = (9*#Scale#),0,0,0
- DynamicVariables = 1
-
-;-------------------------------------------------------------------------;
-;                                 BG                                      ; 
-;-------------------------------------------------------------------------;
-
-[BG]
+[MainWindow]
  Meter = Shape
- Shape = Rectangle 0, 0,  (35*#Scale#),  (45*#Scale#), 3 | Fill Color #C1# | StrokeWidth 2 | Stroke Color #HC#
- X = (2.5*#Scale#)
- Y = (1.3*#Scale#)
+ Shape = Rectangle 0, 0, (#Width# * #Scale#), (#Height# * #Scale#), 8 | Extend WindowStyle
+ WindowStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color #C1#
+ X = 5
+ Y = 5
 
-[Boundary1]
+[Box1]
  Meter = Shape
- Shape = Rectangle 0, 0,  (32*#Scale#),  (42*#Scale#), 3 | Fill Color #C1#,1 | StrokeWidth 2 | Stroke Color #HC#
- X = (4*#Scale#)
- Y = (2.7*#Scale#)
-
-
-;----------------------------------------------------------------------------;
-;                                 PLAYER                                     ;
-;----------------------------------------------------------------------------;
+ Shape = Rectangle 0, 0, ((#CoverSize# + 2) * #Scale#), ((#CoverSize# + 2) * #Scale#), 1 | Extend BoxStyle
+ Shape2 = Rectangle (0.5 * #Scale#), (0.5 * #Scale#), ((#CoverSize# + 1) * #Scale#), ((#CoverSize# + 1) * #Scale#), 1 | Extend BoxStyle
+ BoxStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
+ X = (2 * #Scale#)r
+ Y = (2 * #Scale#)r
 
 [CoverContainer]
  Meter = Shape 
- Shape = Rectangle 0,0, (18*#Scale#), (18*#Scale#),4 | Fill Color #HC#
- X = (10.7*#Scale#)
- Y = (6*#Scale#)
+ Shape = Rectangle 0, 0, (#CoverSize# * #Scale#), (#CoverSize# * #Scale#), 8 | Fill Color #HC#
+ X = (1 * #Scale#)r
+ Y = (1 * #Scale#)r
 
 [Cover.IMG]
  Meter = Image
  MeasureName = Cover
- W = (18*#Scale#)
- H = (18*#Scale#)
+ W = (#CoverSize# * #Scale#)
+ H = (#CoverSize# * #Scale#)
  Container = CoverContainer
  PreserveAspectRatio = 1
  Group = On
@@ -49,91 +33,94 @@
  Meter = String
  MeasureName = Title
  MeterStyle = FontStyle
- FontWeight = 600
- X = (15*#Scale#)
- Y = (25*#Scale#)
- W = (#Scale#*22)
+ InLineSetting = Underline
+ InlineSetting2 = Shadow | 0 | 0 | 0 | #HC#
+ FontWeight = 900
+ X = (15 * #Scale#)r
+ Y = (1 * #Scale#)r
+ W = (40 * #Scale#)
  ClipString = 1
  Group = On
- Text =  %1
 
 [Artist.txt]
  Meter = String
  MeasureName = Artist
  MeterStyle = FontStyle
- FontSize = (1.2*#Scale#)
- FontWeight = 400
- X = (15*#Scale#)
- Y = (28*#Scale#)
- W = (#Scale#*22)
+ FontSize = (1.4 * #Scale#)
+ FontWeight = 550
+ X = (0 * #Scale#)r
+ Y = (4 * #Scale#)r
+ W = ([Title.txt:W])
  ClipString = 1
  Group = On
- Text =  %1
 
 [Progress]
  Meter = String
  MeterStyle = FontStyle
  MeasureName = MProgress
- FontSize = (1*#Scale#)
- Text = %1 |
+ MeasureName2 = MDuration
+ FontSize = (1.5 * #Scale#)
+ Text = %1 | %2
  FontWeight = 500
- X = (13*#Scale#)
- Y = ([Duration:Y])
+ X = (23 * #Scale#)
+ Y = (16 * #Scale#)
 
-[Duration]
+[Box2]
+ Meter = Shape
+ Shape = Rectangle 0, 0, ((#Width# - 2) * #Scale#), (9 * #Scale#), 1 | Extend BoxStyle
+ BoxStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
+ X = (1.5 * #Scale#)
+ Y = (20 * #Scale#)
+
+[Playing.txt]
  Meter = String
  MeterStyle = FontStyle
- MeasureName = MDuration
- FontSize = (1*#Scale#)
- FontWeight = 500
- X = (5*#Scale#)r
- Y = (32.5*#Scale#)
+ FontSize = (1.1 * #Scale#)
+ Text = Playing
+ StringAlign = Center
+ SolidColor = #C1#
+ W = (10 * #Scale#)
+ X = (8 * #Scale#)
+ Y = (19 * #Scale#)
+
+[ProgressBar]
+ Meter = Bar
+ MeasureName = MProgressBar
+ BarOrientation = Horizontal
+ W = ((#Width# - 7) * #Scale#)
+ H = (1.5 * #Scale#)
+ X = (3.9 * #Scale#)
+ Y = (22 * #Scale#)
+ BarColor = #HC#
+ SolidColor = #Base#
+
+[RepeatSong]
+ Meter = Image
+ MeterStyle = ButtonStyle
+ X = (12.5 * #Scale#)
+ Y = (3.5 * #Scale#)r
+ LeftMouseUpAction =  [!CommandMeasure "RepeatButton" "Repeat"]
+
+[Prev]
+ Meter = Image
+ ImageName = #@#Images/Prev4.png
+ MeterStyle = ButtonStyle
+ LeftMouseUpAction = [!CommandMeasure "Title" "Previous"]
 
 [PlayPause]
  Meter = Image
  ImageName = [StateButton]
- X = (18*#Scale#)
- Y = (38*#Scale#)
- W = (3*#Scale#)
+ MeterStyle = ButtonStyle
  DynamicVariables = 1
- ImageTint = #HC#
- Group = On
  LeftMouseUpAction = [!CommandMeasure "StateButton" "PlayPause"]
 
 [Next]
  Meter = Image
  ImageName = #@#Images/Next4.png
- X = (24*#Scale#)
- Y = 0r
- W = ([PlayPause:W])
- ImageTint = #HC#
- Group = On
+ MeterStyle = ButtonStyle
  LeftMouseUpAction = [!CommandMeasure "Title" "Next"]
-
-[Prev]
- Meter = Image
- ImageName = #@#Images/Prev4.png
- X = (12*#Scale#)
- Y = 0r
- W = ([PlayPause:W])
- ImageTint = #HC#
- Group = On
- LeftMouseUpAction = [!CommandMeasure "Title" "Previous"]
-
-[RepeatSong]
- Meter = Image
- X = (6*#Scale#)
- Y = 0r
- W = ([PlayPause:W])
- ImageTint = #HC#
- Group = On
- LeftMouseUpAction =  [!CommandMeasure "RepeatButton" "Repeat"]
 
 [ShuffleSong]
  Meter = Image
- X = (30*#Scale#)
- Y = 0r
- W = ([PlayPause:W])
- ImageTint = #HC#
- Group = On
+ MeterStyle = ButtonStyle
  LeftMouseUpAction =  [!CommandMeasure "ShuffleButton" "Shuffle"]
