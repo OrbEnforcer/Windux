@@ -69,45 +69,27 @@
  ImageName = #@#Images/Discord.png
  ImageTint = #C5#
  W = ([Home:W])
- X = (153 * #Scale#)
+ X = (164 * #Scale#)
  Y = ([Home:Y])
  MouseOverAction = [!SetOption Discord ImageAlpha "160"][!Update]
  MouseLeaveAction = [!SetOption Discord ImageAlpha "255"][!Update]
  LeftMouseUpAction = ["%LOCALAPPDATA%\Discord\Update.exe" --processStart Discord.exe]
 
-[Divider2]
- Meter = Shape
- Shape = Rectangle 0, 0, (14 * #Scale#), ([Bar:H]), 0 | StrokeWidth 0 | Fill Color #HC# | Rotate 0
- X = (156 * #Scale#)
- Y = [Bar:Y]
-
 [WiFiBG]
  Meter = Image
  ImageName = #@#Images/WiFi100.png
- ImageTint = #C1#,100
+ ImageTint = #C5#,100
  W = ([Home:W])
- X = (0.5 * #Scale#)r
+ X = (3.5 * #Scale#)r
  Y = ([Home:Y])
 
 [WiFi.IMG]
  Meter = Image
  ImageName = #@#Images/WiFiOff.png
- ImageTint = #C1#
+ ImageTint = #C5#
  W = ([Home:W])
  X = (0 * #Scale#)r
  Y = ([Home:Y])
-
-[WiFi.txt]
- Meter = String
- MeasureName = Wifi.SSID
- MeterStyle = FontStyle
- FontColor = #C1#
- X = (2.5 * #Scale#)r
- Y = ([Active.txt:Y])
- W = (#Scale# * 12)
- ClipString = 1
- FontSize = 1
- InLineSetting = Size | (1.1 * #Scale#)
 
 ;-------------;
 ;DATE AND TIME;
@@ -115,9 +97,16 @@
 
 [Divider3]
  Meter = Shape
- Shape = Rectangle 0, 0, (11.5 * #Scale#), ([Bar:H]), 0 | StrokeWidth 0 | Fill Color #HC# | Rotate 0
+ Shape = Rectangle 0, 0, (11.5 * #Scale#), ([Bar:H]), 0 | StrokeWidth 0 | Fill Color #HC#
  X = (176.5 * #Scale#)
  Y = [Bar:Y]
+
+[ClockBox]
+ Meter = Shape
+ Shape = Rectangle 0, 0, (6 * #Scale#), (28 * #Size#), 5 | StrokeWidth 0 | Fill Color #Base# | Rotate 0
+ X = (170.1 * #Scale#)
+ Y = (0.7 * #Scale#)
+ Hidden = 1
 
 [Clock]
  Meter = String
@@ -125,6 +114,9 @@
  MeasureName = #TF#
  X = (171 * #Scale#)
  Y = ([Active.txt:Y])
+ MouseOverAction = [!ShowMeter ClockBox]
+ MouseLeaveAction = [!HideMeter ClockBox]
+ LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Clock" "Windowed Clock.ini"]
 
 [MeasureASec]
  Measure=Calc

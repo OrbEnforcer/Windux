@@ -46,7 +46,7 @@
 
 [Date.Measure]
  Measure = Time
- Format = %a, %d %B
+ Format = %a, %d %b
 
 [Status]
  Measure = Plugin
@@ -114,8 +114,9 @@
 
 [Backlight]
  Measure = Plugin
- Plugin = Backlight
-
+ Plugin = PowershellRM
+ Line  = (Get-Ciminstance -Namespace root/WMI -ClassName WmiMonitorBrightness).CurrentBrightness
+ MaxValue = 100
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
 ;--------------------------------------------------------------
