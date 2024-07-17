@@ -69,7 +69,7 @@
  Meter = Shape
  Shape = Rectangle 0, 0, ((#Width# - 2) * #Scale#), (9 * #Scale#), 1 | Extend BoxStyle
  BoxStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
- X = (1.5 * #Scale#)
+ X = (1.75 * #Scale#)
  Y = (20 * #Scale#)
 
 [Playing.txt]

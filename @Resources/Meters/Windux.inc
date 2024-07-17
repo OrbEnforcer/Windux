@@ -64,15 +64,48 @@
  ;LeftMouseUpAction = ["#@#AHK/ActionCenter.exe"]
  LeftMouseUpAction = [!ToggleMeterGroup ACG]
 
+[SpotifyBox]
+ Meter = Shape
+ Shape = Rectangle 0, 0, (3 * #Scale#), (28 * #Size#), 5 | StrokeWidth 0 | Fill Color #Base# | Rotate 0
+ X = (160.3 * #Scale#)
+ Y = (0.7 * #Scale#)
+ Hidden = 1
+
+[DiscordBox]
+ Meter = Shape
+ Shape = Rectangle 0, 0, (3 * #Scale#), (28 * #Size#), 5 | StrokeWidth 0 | Fill Color #Base# | Rotate 0
+ X = (3.2 * #Scale#)r
+ Y = (0.7 * #Scale#)
+ Hidden = 1
+
+[WiFiBox]
+ Meter = Shape
+ Shape = Rectangle 0, 0, (3 * #Scale#), (28 * #Size#), 5 | StrokeWidth 0 | Fill Color #Base# | Rotate 0
+ X = (3 * #Scale#)r
+ Y = (0.7 * #Scale#)
+ Hidden = 1
+
+[Spotify]
+ Meter = Image
+ ImageName = #@#Images/Apps/Spotify
+ ImageTint = #Spotippucin Green#
+ W = (1.8 * #Scale#)
+ X = (161 * #Scale#)
+ Y = (1.3 * #Scale#)
+ MouseOverAction = [!ShowMeter SpotifyBox]
+ MouseLeaveAction = [!HideMeter SpotifyBox]
+ LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Player" "Player.ini" ]
+ RightMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Visualizer" "Visualizer.ini" ]
+
 [Discord]
  Meter = Image
  ImageName = #@#Images/Discord.png
- ImageTint = #C5#
+ ImageTint = #Blue#
  W = ([Home:W])
- X = (164 * #Scale#)
+ X = (3 * #Scale#)r
  Y = ([Home:Y])
- MouseOverAction = [!SetOption Discord ImageAlpha "160"][!Update]
- MouseLeaveAction = [!SetOption Discord ImageAlpha "255"][!Update]
+ MouseOverAction = [!ShowMeter DiscordBox]
+ MouseLeaveAction = [!HideMeter DiscordBox]
  LeftMouseUpAction = ["%LOCALAPPDATA%\Discord\Update.exe" --processStart Discord.exe]
 
 [WiFiBG]
@@ -80,7 +113,7 @@
  ImageName = #@#Images/WiFi100.png
  ImageTint = #C5#,100
  W = ([Home:W])
- X = (3.5 * #Scale#)r
+ X = (3 * #Scale#)r
  Y = ([Home:Y])
 
 [WiFi.IMG]
@@ -90,6 +123,9 @@
  W = ([Home:W])
  X = (0 * #Scale#)r
  Y = ([Home:Y])
+ MouseOverAction = [!ShowMeter WiFiBox]
+ MouseLeaveAction = [!HideMeter WiFiBox]
+ LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\WiFi" "WiFi.ini"]
 
 ;-------------;
 ;DATE AND TIME;
@@ -122,7 +158,7 @@
  Measure=Calc
  Formula=1-MeasureASec
  Substitute="0":"","1":":"
- UpdateDivider = 50
+ UpdateDivider = 25
 
 [Blinks]
  Meter = String
@@ -140,49 +176,6 @@
  Y = ([Active.txt:Y])
  Text = %1
 
-;-----;
-;MUSIC;
-;-----;
-
-[Title.txt]
- Meter = String
- MeasureName = Title
- MeterStyle = FontStyle
- FontColor = #Spotippucin Green#
- StringAlign = Center
- X = (97 * #Scale#)
- Y = ([Active.txt:Y])
- W = (#Scale# * 30)
- ClipString = 1
- FontSize = 1
- InLineSetting = Size | (1.1 * #Scale#)
- Group = On
- Text =  %1 
- LeftMouseUpAction = [!CommandMeasure "StateButton" "PlayPause"]
-
- Meter = Image
- ImageName = #@#Images/Next5.png
- X = (114 * #Scale#)
- Y = (1.2 * #Scale#)
- W = (1.8 * #Scale#)
- ImageTint = #Spotippucin Green#
- Group = On
- LeftMouseUpAction = [!CommandMeasure "Title" "Next"]
- MouseOverAction = [!SetOption Next ImageAlpha "160"][!Update]
- MouseLeaveAction = [!SetOption Next ImageAlpha "255"][!Update]
-
-[Prev]
- Meter = Image
- ImageName = #@#Images/Prev5.png
- X = (78.3 * #Scale#)
- Y = 0r
- W = ([Next:W])
- ImageTint = #Spotippucin Green#
- Group = On
- LeftMouseUpAction = [!CommandMeasure "Title" "Previous"]
- MouseOverAction = [!SetOption Prev ImageAlpha "160"][!Update]
- MouseLeaveAction = [!SetOption Prev ImageAlpha "255"][!Update]
-
 ;-------------;
 ;Action Center;
 ;-------------;
@@ -194,7 +187,8 @@
  X = (152 * #Scale#)
  Y = (5 * #Scale#)
  Group = ACG
-
+ Hidden = 1
+  
 [ControlGroup]
  Meter = Shape
  Shape = Rectangle 0, 0, (38 * #Scale#), (10 * #Scale#), 4 | Extend ActionStyle
@@ -202,7 +196,8 @@
  X = (1.1 * #Scale#)r
  Y = (2 * #Scale#)r
  Group = ACG
-
+ Hidden = 1
+ 
 [Volume.IMG]
  Meter = Image
  ImageName = #@#Images/Volume2.png
@@ -217,7 +212,8 @@
  MouseScrollDownAction = [!CommandMeasure "Volume.Measure" "ChangeVolume -2"]
  MouseActionCursorName = SIZE_NS
  Group = ACG
-
+ Hidden = 1
+ 
 [Volume.Bar]
  Meter = Bar
  MeterStyle = BarStyle
@@ -225,7 +221,8 @@
  X = (3 * #Scale#)r
  Y = (0.6 * #Scale#)r
  Group = ACG
-
+ Hidden = 1
+ 
 [Volume.txt]
  Meter = String
  MeasureName = Vol.Measure
@@ -238,22 +235,24 @@
  Text = %1
  LeftMouseUpAction = [!CommandMeasure "Volume.Measure" "ToggleMute"][!UpdateMeasure Volume.Measure][!UpdateMeasure Vol.Measure][!UpdateMeter *][!Redraw]
  Group = ACG
-
+ Hidden = 1
+ 
 [Brightness.IMG]
  Meter = Image
  ImageName = #@#Images/Brightness.png
  ImageTint = #C6#
- W = ([Volume.IMG:W])
+ W = (2 * #Scale#)
  X = ([Volume.IMG:X])
  Y = (5.5 * #Scale#)r
- MouseOverAction = [!SetOption Brightness.IMG ImageAlpha "160"][!Update]
- MouseLeaveAction = [!SetOption Brightness.IMG ImageAlpha "255"][!Update]
- MouseScrollUpAction = [!CommandMeasure "Backlight" "ChangeBacklight 2"]
- MouseScrollDownAction = [!CommandMeasure "Backlight" "ChangeBacklight -2"]
- LeftMouseUpAction = []
- MouseActionCursorName = SIZE_NS
+ ;MouseOverAction = [!SetOption Brightness.IMG ImageAlpha "160"][!Update]
+ ;MouseLeaveAction = [!SetOption Brightness.IMG ImageAlpha "255"][!Update]
+ ;MouseScrollUpAction = [!CommandMeasure "Backlight" "ChangeBacklight 2"]
+ ;MouseScrollDownAction = [!CommandMeasure "Backlight" "ChangeBacklight -2"]
+ ;LeftMouseUpAction = []
+ ;MouseActionCursorName = SIZE_NS
  Group = ACG
-
+ Hidden = 1
+ 
 [Brightness.Bar]
  Meter = Bar
  MeterStyle = BarStyle
@@ -263,7 +262,8 @@
  X = (3 * #Scale#)r
  Y = (0.6 * #Scale#)r
  Group = ACG
-
+ Hidden = 1
+ 
 [Brightness.txt]
  Meter = String
  MeasureName = Backlight
@@ -275,7 +275,8 @@
  Y = (12 * #Scale#)
  Text = %1
  Group = ACG
-
+ Hidden = 1
+ 
 [KeyboardGroup]
  Meter = Shape
  Shape = Rectangle 0, 0, (38 * #Scale#), (5 * #Scale#), 4 | Extend ActionStyle
@@ -283,19 +284,21 @@
  X = ([ControlGroup:X])
  Y = (6 * #Scale#)r
  Group = ACG
-
+ Hidden = 1
+ 
 [Keyboard.IMG]
  Meter = Image
  ImageName = #@#Images/Key2.png
  ImageTint = #C5#
- W = ([Volume.IMG:W])
+ W = (2 * #Scale#)
  X = (1 * #Scale#)r
  Y = (1.5 * #Scale#)r
  MouseOverAction = [!SetOption Keyboard.IMG ImageAlpha "160"][!Update]
  MouseLeaveAction = [!SetOption Keyboard.IMG ImageAlpha "255"][!Update]
- LeftMouseUpAction = ["#@#AHK/KeyboardLayout.exe"][!Delay 100][!Refresh][!Delay 250][!ShowMeterGroup ACG]
+ LeftMouseUpAction = ["#@#AHK/KeyboardLayout.exe"][!Delay 50][!Refresh][!Delay 25][!ShowMeterGroup ACG]
  Group = ACG
-
+ Hidden = 1
+ 
 [Keyboard]
  Meter = String
  MeasureName = Language
@@ -312,15 +315,17 @@
  ClipString = 1
  W = (30 * #Scale#)
  Group = ACG
-
+ Hidden = 1
+ 
 [Battery.IMG]
  Meter = Image
  ImageName = #@#Images/Battery0.png
  ImageTint = #C5#
- W = ([Volume.IMG:W])
+ W = (2 * #Scale#)
  X = (153 * #Scale#)
  Y = (24.5 * #Scale#)
  Group = ACG
+ Hidden = 1
  
 [Battery.txt]
  Meter = String
@@ -333,19 +338,21 @@
  Y = (23.6 * #Scale#)
  Text = %1%
  Group = ACG
-
+ Hidden = 1
+ 
 [Settings]
  Meter = Image
  ImageName = #@#Images/Settings.png
  ImageTint = #C5#
- W = ([Volume.IMG:W])
+ W = (2 * #Scale#)
  X = (32 * #Scale#)r
  Y = (24.5 * #Scale#)
  Group = ACG
  MouseOverAction = [!SetOption Settings ImageAlpha "160"][!Update]
  MouseLeaveAction = [!SetOption Settings ImageAlpha "255"][!Update]
  LeftMouseUpAction = []
-
+ Hidden = 1
+ 
 ;----------;
 ;HOME GROUP;
 ;----------;
@@ -357,14 +364,16 @@
  X = (0.5 * #Scale#)
  Y = (5 * #Scale#)
  Group = HMG
-
+ Hidden = 1
+ 
 [UserPFPContainer]
  Meter = Shape
  Shape = Rectangle 0,0,(3*#Scale#),(3*#Scale#),(3*#Scale#) | Fill Color #HC#
  Y = (2 * #Scale#)r
  X = (1.5 * #Scale#)r
  Group = HMG
-
+ Hidden = 1
+ 
 [UserPFP]
  Meter = Image
  ImageName = #@#Images/PFP/PFP.png
@@ -375,7 +384,8 @@
  MouseOverAction = [!SetOption UserPFP ImageAlpha "90"][!Update]
  MouseLeaveAction = [!SetOption UserPFP ImageAlpha "255"][!Update]
  Group = HMG
-
+ Hidden = 1
+ 
 [User]
  Meter = String
  MeterStyle = FontStyle
@@ -387,7 +397,8 @@
  X = (5 * #Scale#)r
  Y = (6.5 * #Scale#)
  Group = HMG
-
+ Hidden = 1
+ 
 [Row1]
  Meter = Shape
  Shape = Rectangle 0, 0, (38 * #Scale#), (5 * #Scale#), 4 | Extend HomeStyle
@@ -396,7 +407,8 @@
  X = (1.5 * #Scale#)
  Y = (5 * #Scale#)r
  Group = HMG
-
+ Hidden = 1
+ 
 [FileExplorer]
  Meter = String
  MeterStyle = FontStyle
@@ -408,18 +420,20 @@
  MouseOverAction = [!SetOption Row1 SolidColor "#Base#"][!Update]
  MouseLeaveAction = [!SetOption Row1 SolidColor ""][!Update]
  LeftMouseUpAction = [!ToggleMeterGroup FVG]
-
+ Hidden = 1
+ 
 [T1]
  Meter = Image
  ImageName = #@#Images/T.png
  ImageTint = #C5#
- W = ([Volume.IMG:W])
+ W = (2 * #Scale#)
  X = (32 * #Scale#)r
  Y = (1 * #Scale#)r
  Group = HMG
  MouseOverAction = [!SetOption Row1 SolidColor "#Base#"][!Update]
  MouseLeaveAction = [!SetOption Row1 SolidColor ""][!Update]
  LeftMouseUpAction = [!ToggleMeterGroup FVG]
+ Hidden = 1
 
 [Box]
  Meter = Shape
@@ -428,7 +442,8 @@
  X = (1.5 * #Scale#)
  Y = (18 * #Scale#) 
  Group = HMG
-
+ Hidden = 1
+ 
 [Pinned.txt]
  Meter = String
  MeterStyle = FontStyle
@@ -439,7 +454,8 @@
  W = (10 * #Scale#)
  X = (7 * #Scale#)
  Y = (16 * #Scale#)
-
+ Hidden = 1
+ 
 [BrowserBG]
  Meter = Shape
  Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
@@ -447,7 +463,8 @@
  X = (3 * #Scale#)
  Y = (19.5 * #Scale#)
  Group = HMG
-
+ Hidden = 1
+ 
 [Browser]
  Meter = Image
  ImageName = #@#Images/Browsers/#Browser#
@@ -459,7 +476,8 @@
  MouseLeaveAction = [!SetOption BrowserBG BGStyle "StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1"][!Update]
  LeftMouseUpAction = [https://]
  Group = HMG
-
+ Hidden = 1
+ 
 [VSBG]
  Meter = Shape
  Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
@@ -467,7 +485,8 @@
  X = (9 * #Scale#)
  Y = ([BrowserBG:Y])
  Group = HMG
-
+ Hidden = 1
+ 
 [VS]
  Meter = Image
  ImageName = #@#Images/Apps/VS Code
@@ -479,7 +498,8 @@
  MouseLeaveAction = [!SetOption VSBG BGStyle "StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1"][!Update]
  LeftMouseUpAction = ["E:\Microsoft VS Code\Code.exe"]
  Group = HMG
-
+ Hidden = 1
+ 
 [SpotiBG]
  Meter = Shape
  Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
@@ -487,7 +507,8 @@
  X = (15 * #Scale#)
  Y = ([BrowserBG:Y])
  Group = HMG
-
+ Hidden = 1
+ 
 [Spoti]
  Meter = Image
  ImageName = #@#Images/Apps/Spotify
@@ -497,9 +518,10 @@
  Y = (1 * #Scale#)r
  MouseOverAction = [!SetOption SpotiBG BGStyle "StrokeWidth 2 | Stroke Color #Base# | Fill Color #Base#"][!Update]
  MouseLeaveAction = [!SetOption SpotiBG BGStyle "StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1"][!Update]
- LeftMouseUpAction = ["C:\Users\shwet\AppData\Roaming\Spotify\Spotify.exe"]
+ LeftMouseUpAction = ["%AppData%\Spotify\Spotify.exe"]
  Group = HMG
-
+ Hidden = 1
+ 
 ;--------;
 ;EXPLORER;
 ;--------;
@@ -511,7 +533,8 @@
  X = (42 * #Scale#)
  Y = (11 * #Scale#)
  Group = FVG
-
+ Hidden = 1
+ 
 [PathTitle]
  Meter = String
  MeterStyle = FontStyle
@@ -520,7 +543,8 @@
  Group = FVG
  X = (0.5 * #Scale#)r
  Y = (0.1 * #Scale#)r
-
+ Hidden = 1
+ 
 [Path]
  Meter = String
  MeasureName = mPath
@@ -531,7 +555,8 @@
  W = (#Scale# * 30)
  Group = FVG
  ClipString = 1
-
+ Hidden = 1
+ 
 [FolderCountTitle]
  Meter = String
  MeterStyle = FontStyle
@@ -540,7 +565,8 @@
  Y = (2.5 * #Scale#)r
  Text = Folders:
  Group = FVG
-
+ Hidden = 1
+ 
 [FolderCount]
  Meter = String
  MeasureName = mFolderCount
@@ -552,7 +578,8 @@
  ClipString = 1
  FontSize = 1
  InLineSetting = Size | (1.1 * #Scale#)
-
+ Hidden = 1
+ 
 [FileCountTitle]
  Meter = String
  MeterStyle = FontStyle
@@ -561,7 +588,8 @@
  Y = ([FolderCountTitle:Y])
  Text = Files:
  Group = FVG
-
+ Hidden = 1
+ 
 [FileCount]
  Meter = String
  MeasureName = mFileCount
@@ -573,7 +601,8 @@
  ClipString = 1
  FontSize = 1
  InLineSetting = Size | (1.1 * #Scale#)
-
+ Hidden = 1
+ 
 ;-----;
 ;Index;
 ;-----;
@@ -584,42 +613,48 @@
  Y = (4 * #Scale#)r
  LeftMouseDoubleClickAction = [!CommandMeasure mIndex1Name "FollowPath"][!UpdateMeasure mPath][!UpdateMeasureGroup Children][!UpdateMeter *][!Redraw]
  RightMouseUpAction = [!CommandMeasure mIndex1Name "ContextMenu"]
-
+ Hidden = 1
+ 
 [Index2]
  Meter = Image
  MeterStyle = HighlightStyle
  Y = (7.4 * #Scale#)r
  LeftMouseDoubleClickAction = [!CommandMeasure mIndex2Name "FollowPath"][!UpdateMeasure mPath][!UpdateMeasureGroup Children][!UpdateMeter *][!Redraw]
  RightMouseUpAction = [!CommandMeasure mIndex2Name "ContextMenu"]
-
+ Hidden = 1
+ 
 [Index3]
  Meter = Image
  MeterStyle = HighlightStyle
  Y = (7.5 * #Scale#)r
  LeftMouseDoubleClickAction = [!CommandMeasure mIndex3Name "FollowPath"][!UpdateMeasure mPath][!UpdateMeasureGroup Children][!UpdateMeter *][!Redraw]
  RightMouseUpAction = [!CommandMeasure mIndex3Name "ContextMenu"]
-
+ Hidden = 1
+ 
 [Index4]
  Meter = Image
  MeterStyle = HighlightStyle
  Y = (7.5 * #Scale#)r
  LeftMouseDoubleClickAction = [!CommandMeasure mIndex4Name "FollowPath"][!UpdateMeasure mPath][!UpdateMeasureGroup Children][!UpdateMeter *][!Redraw]
  RightMouseUpAction = [!CommandMeasure mIndex4Name "ContextMenu"]
-
+ Hidden = 1
+ 
 [Index5]
  Meter = Image
  MeterStyle = HighlightStyle
  Y = (7.5 * #Scale#)r
  LeftMouseDoubleClickAction = [!CommandMeasure mIndex5Name "FollowPath"][!UpdateMeasure mPath][!UpdateMeasureGroup Children][!UpdateMeter *][!Redraw]
  RightMouseUpAction = [!CommandMeasure mIndex5Name "ContextMenu"]
-
+ Hidden = 1
+ 
 [Index6]
  Meter = Image
  MeterStyle = HighlightStyle
  Y = (7.5 * #Scale#)r
  LeftMouseDoubleClickAction = [!CommandMeasure mIndex6Name "FollowPath"][!UpdateMeasure mPath][!UpdateMeasureGroup Children][!UpdateMeter *][!Redraw]
  RightMouseUpAction = [!CommandMeasure mIndex6Name "ContextMenu"]
-
+ Hidden = 1
+ 
 ;-----;
 ;ICONS;
 ;-----;
@@ -675,7 +710,8 @@
  Text = "%1 #CRLF#%2 #CRLF#%3 "
  AutoScale = 1
  Group = FVG
-
+ Hidden = 1
+ 
 [Index2Info]
  Meter = String
  MeasureName = mIndex2Name
@@ -689,7 +725,8 @@
  Text = "%1 #CRLF#%2 #CRLF#%3 "
  AutoScale = 1
  Group = FVG
-
+ Hidden = 1
+ 
 [Index3Info]
  Meter = String
  MeasureName = mIndex3Name
@@ -703,7 +740,8 @@
  Text = "%1 #CRLF#%2 #CRLF#%3 "
  AutoScale = 1
  Group = FVG
-
+ Hidden = 1
+ 
 [Index4Info]
  Meter = String
  MeasureName = mIndex4Name
@@ -717,7 +755,8 @@
  Text = "%1 #CRLF#%2 #CRLF#%3 "
  AutoScale = 1
  Group = FVG
-
+ Hidden = 1
+ 
 [Index5Info]
  Meter = String
  MeasureName = mIndex5Name
@@ -731,7 +770,8 @@
  Text = "%1 #CRLF#%2 #CRLF#%3 "
  AutoScale = 1
  Group = FVG
-
+ Hidden = 1
+ 
 [Index6Info]
  Meter = String
  MeasureName = mIndex6Name
@@ -745,3 +785,5 @@
  Text = "%1 #CRLF#%2 #CRLF#%3 "
  AutoScale = 1
  Group = FVG
+ Hidden = 1
+ 

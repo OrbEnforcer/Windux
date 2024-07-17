@@ -5,6 +5,7 @@
  AntiAlias = 1
  ImageTint = #HC#
  Group = FVG
+ Hidden = 1 
 
 [HighlightStyle]
  SolidColor=0,0,0,1
