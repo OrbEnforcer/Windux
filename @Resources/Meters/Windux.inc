@@ -165,7 +165,6 @@
  Measure=Calc
  Formula=1-MeasureASec
  Substitute="0":"","1":":"
- UpdateDivider = 25
 
 [Blinks]
  Meter = String
