@@ -1,7 +1,7 @@
 [MainWindow]
  Meter = Shape 
  Shape = Rectangle 0, 0, (#Width# * #Scale#), (#Height# * #Scale#), 8 | Extend WindowStyle 
- WindowStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color #C1#
+ WindowStyle = StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#
  X = 5
  Y = 5 
 
@@ -21,7 +21,7 @@
  Shape12 = Rectangle (((#VisX# * 22)) * #Scale#), 0, (#VisW# * #Scale#), (#VisH# * [Band2]), 1 | Extend Style
  Shape13 = Rectangle (((#VisX# * 24)) * #Scale#), 0, (#VisW# * #Scale#), (#VisH# * [Band1]), 1 | Extend Style
  Shape14 = Rectangle (((#VisX# * 26)) * #Scale#), 0, (#VisW# * #Scale#), (#VisH# * [Band0]), 1 | Extend Style
- Style = Fill Color #HC# | StrokeWidth 0
+ Style = Fill Color #Main# | StrokeWidth 0
  X = (2.3 * #Scale#)r
  Y = (30 * #Scale#)
  AntiAlias = 1

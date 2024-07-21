@@ -1,7 +1,7 @@
 [FontStyle]
  FontFace= JetBrains Mono Medium
  FontWeight = 900
- FontColor = #HC#
+ FontColor = #Mantle#
  FontSize=(2.5*#Scale#)
  AntiAlias=1
  SolidColor=0,0,0,1
@@ -13,7 +13,7 @@
 
 [BG]
  Meter = Shape
- Shape = Rectangle 0, 0, (38.5*#Scale#), (90*#Scale#) , 4 | Fill Color #C1# | StrokeWidth 2 | Stroke Color #HC#
+ Shape = Rectangle 0, 0, (38.5*#Scale#), (90*#Scale#) , 4 | Fill Color #Crust# | StrokeWidth 2 | Stroke Color #Mantle#
  MouseActionCursor = 0
  X = 5
  Y = 5
@@ -32,20 +32,20 @@
 [HomeIcon]
  Meter = Image
  ImageName = #@#Images/Home.png
- ImageTint = #HC#
+ ImageTint = #Mantle#
  W = (3.5*#Scale#)
  X = (12*#Scale#)
  Y = (1.8*#Scale#)
 
 [L1]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #HC# | StrokeWidth 0 
+ Shape = Rectangle 0,0,([BG:W]-20), 2 | Fill Color #Mantle# | StrokeWidth 0 
  Y = (6*#Scale#)
  X = (1.5*#Scale#)
 
 [AppsBoundary]
  Meter = Shape
- Shape = Rectangle 0,0, (36*#Scale#) , (24*#Scale#),4 | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
+ Shape = Rectangle 0,0, (36*#Scale#) , (24*#Scale#),4 | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #Mantle#
  X = (1.8*#Scale#)
  Y = (8*#Scale#)
 
@@ -61,20 +61,20 @@
 [Pin]
  Meter = Image
  ImageName = #@#Images/Pin.png
- ImageTint = #HC#
+ ImageTint = #Mantle#
  W = (2.5*#Scale#)
  X = (12.5*#Scale#)
  Y = (9.5*#Scale#)
 
 [L2]
  Meter = Shape
- Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #HC# | StrokeWidth 0
+ Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #Mantle# | StrokeWidth 0
  Y = (33.5*#Scale#)
  X = ([L1:X])
 
 [StorageBoundary]
  Meter = Shape
- Shape = Rectangle 0,0, ([AppsBoundary:W]) , ([AppsBoundary:H]),4 | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #HC#
+ Shape = Rectangle 0,0, ([AppsBoundary:W]) , ([AppsBoundary:H]),4 | Fill Color 0,0,0,1 | StrokeWidth 2 | Stroke Color #Mantle#
  X = ([AppsBoundary:X])
  Y = (35.5*#Scale#)
 
@@ -161,7 +161,7 @@
 
 [L3]
  Meter = Shape
- Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #HC# | StrokeWidth 0
+ Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #Mantle# | StrokeWidth 0
  Y = (61.5*#Scale#)
  X = ([L1:X])
 
@@ -216,13 +216,13 @@
 
 [L4]
  Meter = Shape
- Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #HC# | StrokeWidth 0
+ Shape = Rectangle 0,0,([L1:W]), 2 | Fill Color #Mantle# | StrokeWidth 0
  Y = (82.5*#Scale#)
  X = ([L1:X])
 
 [UserPFPContainer]
  Meter = Shape
- Shape = Rectangle 0,0,(5*#Scale#),(5*#Scale#),(5*#Scale#) | Fill Color #HC#
+ Shape = Rectangle 0,0,(5*#Scale#),(5*#Scale#),(5*#Scale#) | Fill Color #Mantle#
  Y = (84*#Scale#)
  X = (1.5*#Scale#)
 
@@ -231,7 +231,7 @@
  ImageName = #@#Images/PFP/PFP.png
  Container = UserPFPContainer
  W = (5*#Scale#)
- ImageTint = #HC#
+ ImageTint = #Mantle#
  LeftMouseUpAction = ["shell:AppsFolder\Windows.ImmersiveControlPanel_cw5n1h2txyewy!microsoft.windows.immersivecontrolpanel"]
 
 [User]
@@ -251,7 +251,7 @@
 
 [App1Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (3.2*#Scale#)
  Y = (15*#Scale#)
 
@@ -259,7 +259,7 @@
  Meter = Image
  ImageName = #Icon1#
  ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = (3.5*#Scale#)
  X = (4.1*#Scale#)
  Y = (16*#Scale#)
@@ -273,7 +273,7 @@
 
 [App2Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (10.5*#Scale#)
  Y = (15*#Scale#)
 
@@ -281,7 +281,7 @@
  Meter = Image
  ImageName = #Icon2#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (11.3*#Scale#)
  Y = (16*#Scale#)
@@ -295,7 +295,7 @@
 
 [App3Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (17.5*#Scale#)
  Y = (15*#Scale#)
 
@@ -303,7 +303,7 @@
  Meter = Image
  ImageName = #Icon3#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (18.2*#Scale#)
  Y = (16*#Scale#)
@@ -317,7 +317,7 @@
 
 [App4Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (24.5*#Scale#)
  Y = (15*#Scale#)
 
@@ -325,7 +325,7 @@
  Meter = Image
  ImageName = #Icon4#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (25.2*#Scale#)
  Y = (16*#Scale#)
@@ -339,7 +339,7 @@
 
 [App5Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (31.5*#Scale#)
  Y = (15*#Scale#)
 
@@ -347,7 +347,7 @@
  Meter = Image
  ImageName = #Icon5#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (32.2*#Scale#)
  Y = (16*#Scale#)
@@ -361,7 +361,7 @@
 
 [App6Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (3.2*#Scale#)
  Y = (24*#Scale#)
 
@@ -369,7 +369,7 @@
  Meter = Image
  ImageName = #Icon6#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (4.1*#Scale#)
  Y = (25*#Scale#)
@@ -383,7 +383,7 @@
 
 [App7Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (10.5*#Scale#)
  Y = (24*#Scale#)
 
@@ -391,7 +391,7 @@
  Meter = Image
  ImageName = #Icon7#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (11.3*#Scale#)
  Y = (25*#Scale#)
@@ -405,7 +405,7 @@
 
 [App8Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (17.5*#Scale#)
  Y = (24*#Scale#)
 
@@ -413,7 +413,7 @@
  Meter = Image
  ImageName = #Icon8#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (18.2*#Scale#)
  Y = (25*#Scale#)
@@ -427,7 +427,7 @@
 
 [App9Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (24.5*#Scale#)
  Y = (24*#Scale#)
 
@@ -435,7 +435,7 @@
  Meter = Image
  ImageName = #Icon9#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (25.2*#Scale#)
  Y = (25*#Scale#)
@@ -449,7 +449,7 @@
 
 [App10Holder]
  Meter = Shape
- Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #HC# | Fill Color #HC#,25
+ Shape = Rectangle 0,0, (#Scale# * 5), (#Scale# * 5.5), 4 | StrokeWidth 1 | Stroke Color #Mantle# | Fill Color #Mantle#,25
  X = (31.5*#Scale#)
  Y = (24*#Scale#)
 
@@ -457,7 +457,7 @@
  Meter = Image
  ImageName = #Icon10#
 ;GreyScale = 1 
- ;ImageTint = #HC#,100
+ ;ImageTint = #Mantle#,100
  W = ([App1:W])
  X = (32.2*#Scale#)
  Y = (25*#Scale#)

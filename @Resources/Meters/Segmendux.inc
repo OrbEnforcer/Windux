@@ -7,8 +7,8 @@
 
 [BarSegment1]
  Meter = Shape
- Shape = Rectangle 0, 0, (#Scale# * 25), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #C1# | Stroke LinearGradient MyGradient
- MyGradient =   #Angle# | #HC# ; 0.5 | #HC# ; 1.0 
+ Shape = Rectangle 0, 0, (#Scale# * 25), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #Crust# | Stroke LinearGradient MyGradient
+ MyGradient =   #Angle# | #Mantle# ; 0.5 | #Mantle# ; 1.0 
  DynamicVariables = 1
  SolidColor = 0,0,0,1
  X = 3
@@ -18,7 +18,7 @@
 [Clock.IMG]
  Meter = Image
  ImageName = #@#Images/Clock2.png
- ImageTint = #HC#
+ ImageTint = #Main#
  W = (2.1 * #Scale#)
  X = (1.5 * #Scale#)
  Y = (1.0 * #Scale#)
@@ -53,7 +53,7 @@
 [Calendar.IMG]
  Meter = Image
  ImageName = #@#Images/Calendar2.png
- ImageTint = #HC#
+ ImageTint = #Main#
  W = ([Clock.IMG:W])
  X = (11.5 * #Scale#)
  Y = ([Clock.IMG:Y])
@@ -67,8 +67,8 @@
 
 [BarSegment2]
  Meter = Shape
- Shape = Rectangle 0, 0, (#Scale# * 8), (#Size# * 37), 4 |StrokeWidth 2 | Fill Color #HC# | Stroke LinearGradient MyGradient
- MyGradient =   #Angle# | #C1# ; 0.5 | #C1# ; 1.0 
+ Shape = Rectangle 0, 0, (#Scale# * 8), (#Size# * 37), 4 |StrokeWidth 2 | Fill Color #Mantle# | Stroke LinearGradient MyGradient
+ MyGradient =   #Angle# | #Crust# ; 0.5 | #Crust# ; 1.0 
  DynamicVariables = 1
  SolidColor = 0,0,0,1
  X = (91 * #Scale#)
@@ -78,7 +78,7 @@
 [Home]
  Meter = Image
  ImageName = #@#Images/Home2.png
- ImageTint = #C1#
+ ImageTint = #Main#
  W = (2.5 * #Scale#)
  X = (1 * #Scale#)r
  Y = (0.8 * #Scale#)
@@ -89,7 +89,7 @@
 [Terminux]
  Meter = Image
  ImageName = #@#Images/Terminal3.png
- ImageTint = #C1#
+ ImageTint = #Main#
  W = ([Clock.IMG:W])
  X = (4 * #Scale#)r
  Y = (0.9 * #Scale#)
@@ -99,8 +99,8 @@
 
 [BarSegment3]
  Meter = Shape
- Shape = Rectangle 0, 0, (#Scale# * 20), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #C1# | Stroke LinearGradient MyGradient
- MyGradient =   #Angle# | #HC# ; 0.5 | #HC# ; 1.0 
+ Shape = Rectangle 0, 0, (#Scale# * 20), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #Crust# | Stroke LinearGradient MyGradient
+ MyGradient =   #Angle# | #Mantle# ; 0.5 | #Mantle# ; 1.0 
  DynamicVariables = 1
  SolidColor = 0,0,0,1
  X = (5 * #Scale#)r
@@ -117,8 +117,8 @@
 
 [BarSegment4]
  Meter = Shape
- Shape = Rectangle 0, 0, (#Scale# * 20), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #C1# | Stroke LinearGradient MyGradient
- MyGradient =   #Angle# | #HC# ; 0.5 | #HC# ; 1.0 
+ Shape = Rectangle 0, 0, (#Scale# * 20), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #Crust# | Stroke LinearGradient MyGradient
+ MyGradient =   #Angle# | #Mantle# ; 0.5 | #Mantle# ; 1.0 
  DynamicVariables = 1
  SolidColor = 0,0,0,1
  X = (69 * #Scale#)
@@ -159,8 +159,8 @@
 
 [BarSegment5]
  Meter = Shape
- Shape = Rectangle 0, 0, (#Scale# * 25), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #C1# | Stroke LinearGradient MyGradient
- MyGradient =   #Angle# | #HC# ; 0.5 | #HC# ; 1.0 
+ Shape = Rectangle 0, 0, (#Scale# * 25), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #Crust# | Stroke LinearGradient MyGradient
+ MyGradient =   #Angle# | #Mantle# ; 0.5 | #Mantle# ; 1.0 
  DynamicVariables = 1
  SolidColor = 0,0,0,1
  X = (165 * #Scale#)
@@ -170,7 +170,7 @@
 [Discord]
  Meter = Image
  ImageName = #@#Images/Discord.png
- ImageTint = #HC#
+ ImageTint = #Main#
  W = ([Clock.IMG:W])
  X = (166.5 * #Scale#)
  Y = ([Clock.IMG:Y])
@@ -181,7 +181,7 @@
 [WiFiBG]
  Meter = Image
  ImageName = #@#Images/WiFi100.png
- ImageTint = #HC#,100
+ ImageTint = #Main#,100
  W = ([Clock.IMG:W])
  X = (170 * #Scale#)
  Y = ([Clock.IMG:Y])
@@ -189,7 +189,7 @@
 [WiFi.IMG]
  Meter = Image
  ImageName = #@#Images/WiFiOff.png
- ImageTint = #HC#
+ ImageTint = #Main#
  W = ([Clock.IMG:W])
  X = (170 * #Scale#)
  Y = ([Clock.IMG:Y])
@@ -204,7 +204,7 @@
 [Volume.IMG]
  Meter = Image
  ImageName = #@#Images/Volume2.png
- ImageTint = #HC#
+ ImageTint = #Main#
  W = ([Clock.IMG:W])
  X = (175 * #Scale#)
  Y = ([Clock.IMG:Y])
@@ -232,7 +232,7 @@
 [Battery.IMG]
  Meter = Image
  ImageName = #@#Images/Battery2.png
- ImageTint = #HC#
+ ImageTint = #Main#
  W = ([Clock.IMG:W])
  X = (183 * #Scale#)
  Y = ([Clock.IMG:Y])
@@ -250,6 +250,6 @@
  MeasureName = Battery.Measure
  W = (1.5 * #Scale#)
  H = (0.5 * #Scale#)
- BarColor = #HC#
+ BarColor = #Main#
  X = (180 * #Scale#)
  Y = 

@@ -1,7 +1,7 @@
 [MainWindow]
  Meter = Shape
  Shape = Rectangle 0, 0, (#Width# * #Scale#), (#Height# * #Scale#), 8 | Extend WindowStyle
- WindowStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color #C1#
+ WindowStyle = StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#
  X = 5
  Y = 5
 
@@ -9,13 +9,13 @@
  Meter = Shape
  Shape = Rectangle 0, 0, ((#CoverSize# + 2) * #Scale#), ((#CoverSize# + 2) * #Scale#), 1 | Extend BoxStyle
  Shape2 = Rectangle (0.5 * #Scale#), (0.5 * #Scale#), ((#CoverSize# + 1) * #Scale#), ((#CoverSize# + 1) * #Scale#), 1 | Extend BoxStyle
- BoxStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
+ BoxStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
  X = (2 * #Scale#)r
  Y = (2 * #Scale#)r
 
 [CoverContainer]
  Meter = Shape 
- Shape = Rectangle 0, 0, (#CoverSize# * #Scale#), (#CoverSize# * #Scale#), 8 | Fill Color #HC#
+ Shape = Rectangle 0, 0, (#CoverSize# * #Scale#), (#CoverSize# * #Scale#), 8 | Fill Color #Main#
  X = (1 * #Scale#)r
  Y = (1 * #Scale#)r
 
@@ -34,7 +34,7 @@
  MeasureName = Title
  MeterStyle = FontStyle
  InLineSetting = Underline
- InlineSetting2 = Shadow | 0 | 0 | 0 | #HC#
+ InlineSetting2 = Shadow | 0 | 0 | 0 | #Main#
  FontWeight = 900
  X = (15 * #Scale#)r
  Y = (1 * #Scale#)r
@@ -68,7 +68,7 @@
 [Box2]
  Meter = Shape
  Shape = Rectangle 0, 0, ((#Width# - 2) * #Scale#), (9 * #Scale#), 1 | Extend BoxStyle
- BoxStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
+ BoxStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
  X = (1.75 * #Scale#)
  Y = (20 * #Scale#)
 
@@ -78,7 +78,7 @@
  FontSize = (1.1 * #Scale#)
  Text = Playing
  StringAlign = Center
- SolidColor = #C1#
+ SolidColor = #Crust#
  W = (10 * #Scale#)
  X = (8 * #Scale#)
  Y = (19 * #Scale#)
@@ -91,7 +91,7 @@
  H = (1.5 * #Scale#)
  X = (3.9 * #Scale#)
  Y = (22 * #Scale#)
- BarColor = #HC#
+ BarColor = #Main#
  SolidColor = #Base#
 
 [RepeatSong]

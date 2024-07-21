@@ -8,7 +8,7 @@
 [BG]
  Meter = Shape
  Shape = Rectangle 5, 5, (#WindowWidth# * #Scale#), (98 * #Scale#), 8 | Extend Colours
- Colours = StrokeWidth 2 | Stroke Color #HC# | Fill Color #C1#,245
+ Colours = StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#,245
  Group = Tweenable
  DynamicVariables = 1 
 
@@ -22,7 +22,7 @@
 [Input Box]
  Meter = Shape
  Shape = Rectangle 0, 0, ((#WindowWidth#-30) * #Scale#), (10 * #Scale#) | Extend Colours
- Colours = StrokeWidth 1 | Stroke Color #HC#,1 | Fill Color #C1#,1
+ Colours = StrokeWidth 1 | Stroke Color #Mantle#,1 | Fill Color #Crust#,1
  X = (2 * #Scale#)r
  Y = (0 * #Scale#)r
  Group = Tweenable
@@ -32,7 +32,7 @@
 [CommandEdit]
  Meter = Shape
  Shape = Rectangle 0, 0, ((#WindowWidth#-30) * #Scale#), (10 * #Scale#) | Extend Colours
- Colours = StrokeWidth 1 | Stroke Color #HC#,1 | Fill Color #C1#,1
+ Colours = StrokeWidth 1 | Stroke Color #Mantle#,1 | Fill Color #Crust#,1
  X = ([Input Box:X])
  Y = ([Input Box:Y])
  LeftMouseUpAction = !execute [!RainmeterPluginBang "Input ExecuteBatch 1"]
@@ -60,9 +60,9 @@
  Y = ([Input Box:Y])
  FontFace = JetBrains Mono ExtraBold
  FontSize = (1.5 * #Scale#)
- FontColor = #HC#
+ FontColor = #Mantle#
  AntiAlias = 1
- SolidColor = #C1#,100
+ SolidColor = #Crust#,100
  Padding = 0,0,0,0
  DynamicVariables = 1
 
@@ -78,7 +78,7 @@
 [BG2]
  Meter = Shape
  Shape = Rectangle 5, 5, ((#WindowWidth2#) * #Scale#), ((#WindowHeight1#) * #Scale#), 8 | Extend Colours
- Colours = StrokeWidth 2 | Stroke Color #HC# | Fill Color #C1#,245
+ Colours = StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#,245
  Group = Tweenable
  DynamicVariables = 1 
  X = ([BG:W]+20)
@@ -116,7 +116,7 @@
 [BG3]
  Meter = Shape
  Shape = Rectangle 5, 5, ((#WindowWidth2#) * #Scale#), (#WindowHeight2# * #Scale#), 8 | Extend Colours
- Colours = StrokeWidth 2 | Stroke Color #HC# | Fill Color #C1#,245
+ Colours = StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#,245
  Group = Tweenable
  DynamicVariables = 1 
  X = ([BG:W]+20)
@@ -140,7 +140,7 @@
  Shape12 = Rectangle (((3*22)) * #Scale#), ((10 * #Scale#)+34), (5 * #Scale#), (-300 * [Band2]), 1 | Extend Style
  Shape13 = Rectangle (((3*24)) * #Scale#), ((10 * #Scale#)+34), (5 * #Scale#), (-300 * [Band1]), 1 | Extend Style
  Shape14 = Rectangle (((3*26)) * #Scale#), ((10 * #Scale#)+34), (5 * #Scale#), (-300 * [Band0]), 1 | Extend Style
- Style = Fill Color #HC# | StrokeWidth 0
+ Style = Fill Color #Mantle# | StrokeWidth 0
  X = (1.5 * #Scale#)r
  Y = ([BG3:Y]+330)
  AntiAlias = 1

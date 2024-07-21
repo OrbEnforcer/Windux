@@ -1,12 +1,12 @@
 [BarStyle]
  BarOrientation = Horizontal
- BarColor = #C1#
- SolidColor = #HC#
+ BarColor = #Crust#
+ SolidColor = #Mantle#
  W = (30*#Scale#)
  H = (1*#Scale#)
  BevelType = 2
- BevelColor = #HC#
- BevelColor2 = #HC#
+ BevelColor = #Mantle#
+ BevelColor2 = #Mantle#
 
 [mmDisk1]
  Measure = FreeDiskSpace

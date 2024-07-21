@@ -1,42 +1,26 @@
 [Variables]
 
-;BAR COLORS 
-C1 =24,24,37
-C2 =165,247,124
-C5 =203,166,247
-C6 =243, 139, 168
-C7 =27,27,41
-C8 =165,247,124
-C9 =20,20,32
-C10 =27,27,41
-
+Main =215,180,243
+;All text and button colour
+Crust =30,30,46
+;Window and Bar colour
+Mantle =30,30,46
+;Outline colour
 Red = 243,139,168
 Blue = 137,180,250
 Yellow = 249,226,175
 Green = 166,227,161
 Pink = 245,194,231
 Peach = 250,179,135
-
-;SETTINGS AND CUSTOM MENU COLORS
-SC = #C1#,245
-
-;COMMON COLOR 
-HC =203,166,247
-
-;MISC COLORS
-Spotippucin Green = 166,227,161
 Surface = 49, 50, 68
 Base = 30,30,46
 
 ;TIME FORMAT
 TF =Time.12Hr
 
-;HOME TYPE
-HT =Side Home
-
-;HIDDEN VARIABLES FOR HOME TYPE
-SF =1
-SS =0
+;HIDDEN VARIABLES FOR BAR TYPE
+SW =0
+SS =1
 
 ;HIDDEN VARIABLES FOR CLOCK SETTINGS
 S12H =0
@@ -46,7 +30,7 @@ S24H =1
 Size = 1.0
 
 ;BROWSER
-Browser = OperaGX
+Browser = Vivaldi
 
 ;SEARCH ENGINE
 Bing = "www.bing.com"

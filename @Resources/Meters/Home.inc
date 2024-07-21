@@ -1,6 +1,6 @@
 [FontStyle]
  FontFace= JetBrains Mono ExtraBold
- FontColor = #HC#
+ FontColor = #Mantle#
  FontSize=(#SCREENAREAWIDTH#/70)
  AntiAlias=1
  SolidColor=0,0,0,1
@@ -18,13 +18,13 @@
 
 [BG]
  Meter = Shape
- Shape = Rectangle 0, 0, #SCREENAREAWIDTH#, #SCREENAREAHEIGHT# , 0 | Fill Color #C1#,50
+ Shape = Rectangle 0, 0, #SCREENAREAWIDTH#, #SCREENAREAHEIGHT# , 0 | Fill Color #Crust#,50
  LeftMouseUpAction =  [!ToggleConfig "Windux\Home\Home" "Home.ini"]
  MouseActionCursor = 0
 
 [BG2]
  Meter = Shape
- Shape = Rectangle 0, 0, #SCREENAREAWIDTH#, (#SCREENAREAHEIGHT#/8) , 0 | Fill Color #C1#,60
+ Shape = Rectangle 0, 0, #SCREENAREAWIDTH#, (#SCREENAREAHEIGHT#/8) , 0 | Fill Color #Crust#,60
  Y = (#SCREENAREAHEIGHT#-125)
 
 
@@ -41,14 +41,14 @@
 
 [UserPFPContainer]
  Meter = Shape
- Shape = Rectangle 0,0,([BG:W]/30),([BG:W]/30),([BG:W]/30) | Fill Color #HC#
+ Shape = Rectangle 0,0,([BG:W]/30),([BG:W]/30),([BG:W]/30) | Fill Color #Mantle#
  X = ([BG:X]+20)
  Y = ([BG:H]/1.1)
 
 [UserPFP]
  Meter = Image
  ImageName = #@#Images/PFP/PFP.png
- ImageTint = #HC#
+ ImageTint = #Mantle#
  Container = UserPFPContainer
  W = ([BG:W]/30)
  X = 0
@@ -69,7 +69,7 @@
 [Power]
  Meter = Image
  ImageName = #@#Images/Power.png
- ImageTint = #HC#
+ ImageTint = #Mantle#
  W = ([BG:W]/40)
  X = ([BG:W]/1.07)
  Y = ([BG:H]/1.09)
@@ -80,13 +80,13 @@
 ;----------------------------------------------
 [MusicBoundary]
  Meter = Shape
- Shape = Rectangle 0, 0, #SCREENAREAWIDTH#, (#SCREENAREAHEIGHT#/10) , 0 | Fill Color #C1#,1 | StrokeWidth 3 | Stroke Color #HC#
+ Shape = Rectangle 0, 0, #SCREENAREAWIDTH#, (#SCREENAREAHEIGHT#/10) , 0 | Fill Color #Crust#,1 | StrokeWidth 3 | Stroke Color #Mantle#
  Y = ([BG:H]/1.275)
  Group = On
 
 [CoverContainer]
  Meter = Shape 
- Shape = Rectangle 0,0, ([BG:W]/25), ([BG:W]/25),4 | Fill Color #HC#
+ Shape = Rectangle 0,0, ([BG:W]/25), ([BG:W]/25),4 | Fill Color #Mantle#
  X = ([MusicBoundary:X]+25)
  Y = ([MusicBoundary:Y]+15)
 
@@ -128,7 +128,7 @@
  Y = ([MusicBoundary:Y]+40)
  W = ([BG:W]/70)
  DynamicVariables = 1
- ImageTint = #HC#
+ ImageTint = #Mantle#
  Group = On
  LeftMouseUpAction = [!CommandMeasure "StateButton" "PlayPause"]
 
@@ -138,7 +138,7 @@
  X = 70r
  Y = 0r
  W = ([PlayPause:W])
- ImageTint = #HC#
+ ImageTint = #Mantle#
  Group = On
  LeftMouseUpAction = [!CommandMeasure "Title" "Next"]
 
@@ -148,7 +148,7 @@
  X = -140r
  Y = 0r
  W = ([PlayPause:W])
- ImageTint = #HC#
+ ImageTint = #Mantle#
  Group = On
  LeftMouseUpAction = [!CommandMeasure "Title" "Previous"]
 

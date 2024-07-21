@@ -29,11 +29,11 @@ https://github.com/OrbEnforcer/Windux/assets/108188721/4ef8c37f-f2c5-4e68-8b15-c
 <img width="960" alt="2024-04-22 (11)" src="https://github.com/OrbEnforcer/Windux/assets/108188721/39ffff4b-bf3f-487b-996d-ebd10c83e9f3">
 
 ## TO DO
-- [ ]  Browser for Windux Bar
+- [x]  Browser for Windux Bar
 - [x] Custom Skin Menu
 - [ ] Being able to change element positions on the linux bar or turn them on/off
 - [x] A better dock than my previous one
-- [ ] Winfetch without using terminal
+- [x] Winfetch without using terminal
 - [x] A custom start menu that opens instead of windows start menu when you click on home on bars
 - [x] File Explorer for desktop
 - [ ] Vertical Windux Bar

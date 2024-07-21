@@ -1,7 +1,7 @@
 [MainWindow]
  Meter = Shape 
  Shape = Rectangle 0, 0, (#Width# * #Scale#), (#Height# * #Scale#), 8 | Extend WindowStyle 
- WindowStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color #C1#
+ WindowStyle = StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#
  X = 5
  Y = 5 
 
@@ -12,19 +12,18 @@
  X = (3 * #Scale#)
  Y = (3 * #Scale#)
 
-;[RainFetch.img]
+[RainFetch.img]
  Meter = Image
- ImageName = #@#Images/Rainmeter
- ImageTint = #Blue#
+ ImageName = #@#Images/fetch2
  W = (10 * #Scale#)
- X = (4 * #Scale#)
- Y = (6 * #Scale#)
+ X = (8 * #Scale#)
+ Y = (11 * #Scale#)
 
 [Box]
  Meter = Shape
  Shape = Rectangle 0,0, (12 * #Scale#), (16 * #Scale#) , 8 | Extend BoxStyle
- BoxStyle = StrokeWidth 2 | Stroke Color #HC# | Fill Color 0,0,0,1
- X = (19 * #Scale#)
+ BoxStyle = StrokeWidth 2 | Stroke Color #Mantle# | Fill Color 0,0,0,1
+ X = (21 * #Scale#)
  Y = (9 * #Scale#)
 
 [User.img]

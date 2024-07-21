@@ -3,7 +3,7 @@
  X = (45 * #Scale#)
  Y = (7.3 * #Scale#)r
  AntiAlias = 1
- ImageTint = #HC#
+ ImageTint = #Main#
  Group = FVG
  Hidden = 1 
 
