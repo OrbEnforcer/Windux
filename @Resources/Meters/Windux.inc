@@ -21,15 +21,15 @@
  MouseLeaveAction = [!SetOption Home ImageAlpha "255"][!Update]
  LeftMouseUpAction = [!ToggleMeterGroup HMG]
 
-[Terminux]
+[Rainfetch]
  Meter = Image
  ImageName = #@#Images/Terminal3.png
  ImageTint = #Main#
  W = ([Home:W])
  X = (4.6 * #Scale#)
  Y = ([Home:Y])
- MouseOverAction = [!SetOption Terminux ImageAlpha "160"][!Update]
- MouseLeaveAction = [!SetOption Terminux ImageAlpha "255"][!Update]
+ MouseOverAction = [!SetOption Rainfetch ImageAlpha "160"][!Update]
+ MouseLeaveAction = [!SetOption Rainfetch ImageAlpha "255"][!Update]
  LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Rainfetch" "Rainfetch.ini"]
 
 [Divider1]
@@ -117,7 +117,7 @@
 [WiFiBG]
  Meter = Image
  ImageName = #@#Images/WiFi100.png
- ImageTint = #Main#,100
+ ImageTint = #Main#80
  W = ([Home:W])
  X = (3 * #Scale#)r
  Y = ([Home:Y])
@@ -450,9 +450,9 @@
 [Box]
  Meter = Shape
  Shape = Rectangle 0,0, (38 * #Scale#), (8 * #Scale#), 4 | Extend BGStyle
- BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color #Base#,1
+ BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color #Base#01
  X = (1.5 * #Scale#)
- Y = (18 * #Scale#) 
+ Y = (19 * #Scale#) 
  Group = HMG
  Hidden = 1
  
@@ -465,7 +465,7 @@
  SolidColor = #Crust#
  W = (10 * #Scale#)
  X = (7 * #Scale#)
- Y = (16 * #Scale#)
+ Y = (17 * #Scale#)
  Hidden = 1
  
 [BrowserBG]
@@ -473,7 +473,7 @@
  Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
  BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
  X = (3 * #Scale#)
- Y = (19.5 * #Scale#)
+ Y = (20.5 * #Scale#)
  Group = HMG
  Hidden = 1
  

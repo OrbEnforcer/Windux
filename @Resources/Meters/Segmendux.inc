@@ -77,25 +77,24 @@
 
 [Home]
  Meter = Image
- ImageName = #@#Images/Home2.png
- ImageTint = #Main#
- W = (2.5 * #Scale#)
+ ImageName = #@#Images/Windows3.png
+ W = (2.1 * #Scale#)
  X = (1 * #Scale#)r
- Y = (0.8 * #Scale#)
+ Y = (1.1 * #Scale#)
  MouseOverAction = [!SetOption Home ImageAlpha "160"][!Update]
  MouseLeaveAction = [!SetOption Home ImageAlpha "255"][!Update]
  LeftMouseUpAction = [!ToggleConfig "Windux\Home\Home" "Home Mini.ini"]
 
-[Terminux]
+[Rainfetch]
  Meter = Image
  ImageName = #@#Images/Terminal3.png
  ImageTint = #Main#
- W = ([Clock.IMG:W])
+ W = (2.1 * #Scale#)
  X = (4 * #Scale#)r
- Y = (0.9 * #Scale#)
- MouseOverAction = [!SetOption Terminux ImageAlpha "160"][!Update]
- MouseLeaveAction = [!SetOption Terminux ImageAlpha "255"][!Update]
- LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Terminux" "Terminux.ini"]
+ Y = (1.1 * #Scale#)
+ MouseOverAction = [!SetOption Rainfetch ImageAlpha "160"][!Update]
+ MouseLeaveAction = [!SetOption Rainfetch ImageAlpha "255"][!Update]
+ LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Rainfetch" "Rainfetch.ini"]
 
 [BarSegment3]
  Meter = Shape
@@ -138,25 +137,6 @@
  InLineSetting= Size | (1.1 * #Scale#)
  DynamicVariables=1
 
-[Bands]
- Meter = Shape
- Shape =   Rectangle (((0.78*0))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band0]), 1 | Extend Style
- Shape2 =  Rectangle (((0.78*2))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band1]), 1 | Extend Style
- Shape3 =  Rectangle (((0.78*4))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band2]), 1 | Extend Style
- Shape4 =  Rectangle (((0.78*6))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band3]), 1 | Extend Style
- Shape5  = Rectangle (((0.78*8))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band4]), 1 | Extend Style
- Shape6  = Rectangle (((0.78*10))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band5]), 1 | Extend Style
- Shape7  = Rectangle (((0.78*12))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band6]), 1 | Extend Style
- Shape8  = Rectangle (((0.78*14))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band2]), 1 | Extend Style
- Shape9  = Rectangle (((0.78*16))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band1]), 1 | Extend Style
- Shape10 = Rectangle (((0.78*18))*#Scale#), ([Home:Y]+34), (1.5*#Scale#), (-25*[Band0]), 1 | Extend Style
- Style = Fill Color #C4# | StrokeWidth 0
- X = (2.2 * #Scale#)r
- Y = ([BarSegment4:Y]-10)
- AntiAlias = 1
- Hidden = 1
- DynamicVariables = 1
-
 [BarSegment5]
  Meter = Shape
  Shape = Rectangle 0, 0, (#Scale# * 25), (#Size# * 37), 4 | StrokeWidth 2 | Fill Color #Crust# | Stroke LinearGradient MyGradient
@@ -181,7 +161,7 @@
 [WiFiBG]
  Meter = Image
  ImageName = #@#Images/WiFi100.png
- ImageTint = #Main#,100
+ ImageTint = #Main#80
  W = ([Clock.IMG:W])
  X = (170 * #Scale#)
  Y = ([Clock.IMG:Y])

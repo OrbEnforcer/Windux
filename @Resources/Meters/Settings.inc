@@ -1,6 +1,6 @@
 [MainWindow]
  Meter = Shape
- Shape = Rectangle 5, 5, (80 * #Scale#), (55 * #Scale#), 8 | Fill Color #Base# | StrokeWidth 3 | Stroke Color #Mantle#
+ Shape = Rectangle 5, 5, (80 * #Scale#), (55 * #Scale#), 8 | Fill Color #Settings# | StrokeWidth 2 | Stroke Color #Mantle#
  MouseOverAction = [!ShowMeter Minimize]
  MouseLeaveAction = [!HideMeter Minimize]
 
@@ -52,6 +52,14 @@
  Y = (2.5 * #Scale#)r
  LeftMouseUpAction = ["#@#Color Picker\RainRGB4.exe" "VarName=Mantle" "FileName=#@#Variables.inc"][!Refresh *]
 
+[Base.txt]
+ Meter = String
+ MeterStyle = FS3
+ Text = Base
+ X = (0 * #Scale#)r
+ Y = (2.5 * #Scale#)r
+ LeftMouseUpAction = ["#@#Color Picker\RainRGB4.exe" "VarName=Base" "FileName=#@#Variables.inc"][!Refresh *]
+
 [MainPreview]
  Meter = Shape
  Shape = Rectangle 0, 0, (2 * #Scale#), (2 * #Scale#), (2 * #Scale#) | StrokeWidth 0 | Fill Color #Main#
@@ -72,6 +80,41 @@
  X = (0 * #Scale#)r
  Y = (2.5 * #Scale#)r
  LeftMouseUpAction = ["#@#Color Picker\RainRGB4.exe" "VarName=Mantle" "FileName=#@#Variables.inc"][!Refresh *]
+
+[BasePreview]
+ Meter = Shape
+ Shape = Rectangle 0, 0, (2 * #Scale#), (2 * #Scale#), (2 * #Scale#) | StrokeWidth 0 | Fill Color #Base#
+ X = (0 * #Scale#)r
+ Y = (2.5 * #Scale#)r
+ LeftMouseUpAction = ["#@#Color Picker\RainRGB4.exe" "VarName=Base" "FileName=#@#Variables.inc"][!Refresh *]
+
+[MainHEX]
+ Meter = String
+ MeterStyle = FS3
+ Text = #Main#
+ X = (18 * #Scale#)
+ Y = (14 * #Scale#)
+
+[CrustHEX]
+ Meter = String
+ MeterStyle = FS3
+ Text = #Crust#
+ X = (0 * #Scale#)r
+ Y = (2.5 * #Scale#)r
+ 
+[MantleHEX]
+ Meter = String
+ MeterStyle = FS3
+ Text = #Mantle#
+ X = (0 * #Scale#)r
+ Y = (2.5 * #Scale#)r
+
+[BaseHEX]
+ Meter = String
+ MeterStyle = FS3
+ Text = #Base#
+ X = (0 * #Scale#)r
+ Y = (2.5 * #Scale#)r
 
 ;----;
 ;Time;
