@@ -61,7 +61,7 @@
 [Calendar]
  Meter = String
  MeterStyle = FontStyle
- MeasureName = Date.Measure
+ MeasureName = HalfDate.Measure
  X = (14 * #Scale#)
  Y = ([Clock:Y])
 
@@ -88,7 +88,7 @@
 [Rainfetch]
  Meter = Image
  ImageName = #@#Images/Terminal3.png
- ImageTint = #Main#
+ ImageTint = #Crust#
  W = (2.1 * #Scale#)
  X = (4 * #Scale#)r
  Y = (1.1 * #Scale#)

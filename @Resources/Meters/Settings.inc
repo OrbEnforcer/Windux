@@ -258,33 +258,40 @@
  ImageName = #@#Images/Browsers/Brave
  X = (36 * #Scale#)
  Y = (16 * #Scale#)
+ LeftMouseUpAction = [!WriteKeyValue Variables "Browser" "Brave" "#@#Variables.inc"][!Refresh "Windux\Bar" "Windux Bar.ini"]
 
 [Chrome.IMG]
  Meter = Image
  MeterStyle = IconStyle
  ImageName = #@#Images/Browsers/Chrome
+ LeftMouseUpAction = [!WriteKeyValue Variables "Browser" "Chrome" "#@#Variables.inc"][!Refresh "Windux\Bar" "Windux Bar.ini"]
 
 [Edging.IMG]
  Meter = Image
  MeterStyle = IconStyle
  ImageName = #@#Images/Browsers/Edging
+ LeftMouseUpAction = [!WriteKeyValue Variables "Browser" "Edging" "#@#Variables.inc"][!Refresh "Windux\Bar" "Windux Bar.ini"]
 
 [Firefox.IMG]
  Meter = Image
  MeterStyle = IconStyle
  ImageName = #@#Images/Browsers/Firefox
+ LeftMouseUpAction = [!WriteKeyValue Variables "Browser" "Firefox" "#@#Variables.inc"][!Refresh "Windux\Bar" "Windux Bar.ini"]
 
 [Opera.IMG]
  Meter = Image
  MeterStyle = IconStyle
  ImageName = #@#Images/Browsers/Opera
+ LeftMouseUpAction = [!WriteKeyValue Variables "Browser" "Opera" "#@#Variables.inc"][!Refresh "Windux\Bar" "Windux Bar.ini"]
 
 [OperaGX.IMG]
  Meter = Image
  MeterStyle = IconStyle
  ImageName = #@#Images/Browsers/OperaGX
+ LeftMouseUpAction = [!WriteKeyValue Variables "Browser" "OperaGX" "#@#Variables.inc"][!Refresh "Windux\Bar" "Windux Bar.ini"]
 
 [Vivaldi.IMG]
  Meter = Image
  MeterStyle = IconStyle
  ImageName = #@#Images/Browsers/Vivaldi
+ LeftMouseUpAction = [!WriteKeyValue Variables "Browser" "Vivaldi" "#@#Variables.inc"][!Refresh "Windux\Bar" "Windux Bar.ini"]

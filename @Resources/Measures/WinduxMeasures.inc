@@ -1,16 +1,8 @@
-[Charging]
- Measure = Plugin
- Plugin = PowerPlugin
- PowerState = ACLine
- IfCondition = Charging = 0
- IfTrueAction =  [!SetOption Battery.IMG ImageName "#@#Images/Battery0.png"] 
- IfCondition2 = Charging = 1
- IfTrueAction2 = [!SetOption Battery.IMG ImageName "#@#Images/BatteryCharging.png"]
-
 [Battery.Measure]
  Measure=Plugin
  Plugin=PowerPlugin
  PowerState=Percent
+ OnChangeAction = [!Refresh "Windux\Bar" "Windux Bar.ini"]
  IfCondition = Battery.Measure = 0
  IfTrueAction = [!SetOption Battery.IMG ImageName "#@#Images/Battery0.png"]
  IfCondition2 = (Battery.Measure >= 10) && (Battery.Measure < 20) 
@@ -34,10 +26,19 @@
  IfCondition11 = Battery.Measure = 100
  IfTrueAction11 = [!SetOption Battery.IMG ImageName "#@#Images/Battery100.png"]
 
+[Charging]
+ Measure = Plugin
+ Plugin = PowerPlugin
+ PowerState = ACLine
+ OnChangeAction = [!Refresh "Windux\Bar" "Windux Bar.ini"]
+ IfCondition = Charging = 0
+ IfTrueAction =  [!SetOption Battery.txt Text "%1% On Power"]
+ IfCondition2 = Charging = 1
+ IfTrueAction2 = [!SetOption Battery.txt Text "%1% Charging"][!SetOption Battery.IMG ImageName "#@#Images/BatteryCharging.png"]
+
 [Volume.Measure]
  Measure = Plugin
  Plugin = Win7AudioPlugin
- UpdateDivider = 0.0005
 
 [Vol.Measure]
  Measure = Calc
@@ -52,7 +53,6 @@
  IfFalseAction = [!SetOption Volume.IMG ImageName "#@#Images/Volume2.png"]
  IfTrueAction2 = [!SetOption Volume.IMG ImageName "#@#Images/Mute.png"]
  IfFalseAction2 = [!SetOption Volume.IMG ImageName "#@#Images/Volume2.png"]
- UpdateDivider = 0.0005
  
 [Language]
  Measure = Plugin
@@ -86,3 +86,4 @@
  Plugin = PowershellRM
  Line  = (Get-Ciminstance -Namespace root/WMI -ClassName WmiMonitorBrightness).CurrentBrightness
  MaxValue = 100
+

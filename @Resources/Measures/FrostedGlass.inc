@@ -1,5 +1,5 @@
 [FrostedGlass]
  Measure = Plugin
  Plugin = FrostedGlass
- Type = #Blur#
- Corner = Round 
+ Type = Blur
+ DynamicVariables = 1

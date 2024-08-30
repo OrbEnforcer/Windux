@@ -25,19 +25,19 @@
 
 [PowerHolder]
  Meter = Shape
- Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#,25
+ Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#25
  X = (42 * #Scale#)
  Y = (3 * #Scale#)
 
 [LockHolder]
  Meter = Shape
- Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#,25
+ Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#25
  X = (42 * #Scale#)
  Y = (10 * #Scale#)
 
 [UserHolder]
  Meter = Shape
- Shape = Rectangle 0, 0, (37 * #Scale#), (12 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#,25
+ Shape = Rectangle 0, 0, (37 * #Scale#), (12 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#25
  X = (3 * #Scale#)
  Y = (3 * #Scale#)
 
@@ -49,25 +49,25 @@
 
 [PreviousHolder]
  Meter = Shape
- Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#,25
+ Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#25
  X = (3 * #Scale#)
  Y = (31 * #Scale#)
 
 [PlayHolder]
  Meter = Shape
- Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#,25
+ Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#25
  X = (7 * #Scale#)r
  Y = (31 * #Scale#)
 
 [NextHolder]
  Meter = Shape
- Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#,25
+ Shape = Rectangle 0, 0, (5 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Mantle#25
  X = (7 * #Scale#)r
  Y = (31 * #Scale#)
 
 [DurationHolder]
  Meter = Shape
- Shape = Rectangle 0, 0, (23 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#,25
+ Shape = Rectangle 0, 0, (23 * #Scale#), (5 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill Color #Crust#25
  X = (7 * #Scale#)r
  Y = (31 * #Scale#)
 
@@ -94,7 +94,7 @@
  Y = (11 * #Scale#)
  MouseOverAction = [!SetOption Lock ImageAlpha "160"][!Update]
  MouseLeaveAction = [!SetOption Lock ImageAlpha "255"][!Update]
- LeftMouseUpAction= [rundll32.exe user32.dll LockWorkStation]
+ LeftMouseUpAction= [!ActivateConfig "Windux\Windowed Skins\Lock" "Lock.ini"]
 
 [Previous]
  Meter = Image
@@ -133,28 +133,13 @@
 ;                          MUSIC                              ;
 ;-------------------------------------------------------------;
 
-[PlayerName.txt]
- Meter = String
- MeterStyle = FontStyle
- MeasureName = PlayerName
- Text = %1 
- X = (7*#Scale#)r
- Y = (32.5 * #Scale#)
-
 [SongProgress]
  Meter = String
  MeterStyle = FontStyle
  MeasureName = MProgress
- Text = %1 |
+ MeasureName2 = MDuration
+ Text = %1 | %2
  X = (8*#Scale#)r
- Y = (32.5 * #Scale#)
-
-[SongDuration]
- Meter = String
- MeterStyle = FontStyle
- MeasureName =  MDuration
- Text = %1 
- X = (6.5 * #Scale#)r
  Y = (32.5 * #Scale#)
 
 [Cover.IMG]
@@ -169,7 +154,7 @@
 [CoverGradient]
  Meter = Shape
  Shape = Rectangle 0, 0, (44 * #Scale#), (12 * #Scale#), 4 | StrokeWidth 2 | Stroke Color #Mantle# | Fill LinearGradient MyFillGradient
- MyFillGradient= 210 | #Crust#,250 ; 0.5 | #Crust#,1 ; 1.2
+ MyFillGradient= 210 | #Crust#FF ; 0.5 | #Crust#10 ; 1.2
  X = (3 * #Scale#)
  Y = (17 * #Scale#)
 
@@ -240,8 +225,8 @@
 
 [User.IMG]
  Meter = Image
- ImageName = "C:\Users\shwet\OneDrive\Pictures\PFP\macchiato-hald8-New PFP.jpg.jpg"
- ;ImageTint = #Mantle#
+ ImageName = #@#Images/PFP/PFP
+ ImageTint = #Mantle#
  W = (10 * #Scale#)
  H = (10 * #Scale#)
  PreserveAspectRatio = 1 
@@ -415,48 +400,48 @@
  Shape = Rectangle 0,0, (12 * #Scale#), (6 * #Scale#), 4 | StrokeWidth 0 | Fill Color #Mantle#
  X = (4.7 * #Scale#)
  Y = (51.5 * #Scale#)
- MouseOverAction = [!SetOption File1.IMG ImageAlpha "160"][!SetOption File1 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File1.IMG ImageAlpha "255"][!SetOption File1 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File1.IMG ImageAlpha "160"][!SetOption File1 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File1.IMG ImageAlpha "255"][!SetOption File1 FontColor "#Crust#FF"][!Update]
 
 [File2Holder]
  Meter = Shape
  Shape = Rectangle 0,0, (12 * #Scale#), (6 * #Scale#), 4 | StrokeWidth 0 | Fill Color #Mantle#
  X = (14 * #Scale#)r
  Y = (0 * #Scale#)r
- MouseOverAction = [!SetOption File2.IMG ImageAlpha "160"][!SetOption File2 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File2.IMG ImageAlpha "255"][!SetOption File2 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File2.IMG ImageAlpha "160"][!SetOption File2 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File2.IMG ImageAlpha "255"][!SetOption File2 FontColor "#Crust#FF"][!Update]
 
 [File3Holder]
  Meter = Shape
  Shape = Rectangle 0,0, (12 * #Scale#), (6 * #Scale#), 4 | StrokeWidth 0 | Fill Color #Mantle#
  X = (14 * #Scale#)r
  Y = (0 * #Scale#)r
- MouseOverAction = [!SetOption File3.IMG ImageAlpha "160"][!SetOption File3 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File3.IMG ImageAlpha "255"][!SetOption File3 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File3.IMG ImageAlpha "160"][!SetOption File3 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File3.IMG ImageAlpha "255"][!SetOption File3 FontColor "#Crust#FF"][!Update]
 
 [File4Holder]
  Meter = Shape
  Shape = Rectangle 0,0, (12 * #Scale#), (6 * #Scale#), 4 | StrokeWidth 0 | Fill Color #Mantle#
  X = ([File1Holder:X])
  Y = (8.3 * #Scale#)r
- MouseOverAction = [!SetOption File4.IMG ImageAlpha "160"][!SetOption File4 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File4.IMG ImageAlpha "255"][!SetOption File4 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File4.IMG ImageAlpha "160"][!SetOption File4 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File4.IMG ImageAlpha "255"][!SetOption File4 FontColor "#Crust#FF"][!Update]
 
 [File5Holder]
  Meter = Shape
  Shape = Rectangle 0,0, (12 * #Scale#), (6 * #Scale#), 4 | StrokeWidth 0 | Fill Color #Mantle#
  X = (14 * #Scale#)r
  Y = (0 * #Scale#)r
- MouseOverAction = [!SetOption File5.IMG ImageAlpha "160"][!SetOption File5 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File5.IMG ImageAlpha "255"][!SetOption File5 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File5.IMG ImageAlpha "160"][!SetOption File5 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File5.IMG ImageAlpha "255"][!SetOption File5 FontColor "#Crust#FF"][!Update]
 
 [File6Holder]
  Meter = Shape
  Shape = Rectangle 0,0, (12 * #Scale#), (6 * #Scale#), 4 | StrokeWidth 0 | Fill Color #Mantle#
  X = (14 * #Scale#)r
  Y = (0 * #Scale#)r
- MouseOverAction = [!SetOption File6.IMG ImageAlpha "160"][!SetOption File6 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File6.IMG ImageAlpha "255"][!SetOption File6 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File6.IMG ImageAlpha "160"][!SetOption File6 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File6.IMG ImageAlpha "255"][!SetOption File6 FontColor "#Crust#FF"][!Update]
 
 ;---------------------------------------
 
@@ -467,8 +452,9 @@
  W = (3 * #Scale#)
  X = (9 * #Scale#)
  Y = (51.8 * #Scale#)
- MouseOverAction = [!SetOption File1.IMG ImageAlpha "160"][!SetOption File1 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File1.IMG ImageAlpha "255"][!SetOption File1 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File1.IMG ImageAlpha "160"][!SetOption File1 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File1.IMG ImageAlpha "255"][!SetOption File1 FontColor "#Crust#FF"][!Update]
+ LeftMouseUpAction = [explorer.exe]
 
 [File1]
  Meter = String
@@ -478,8 +464,8 @@
  X = (8.5 * #Scale#)
  Y = (3.3 * #Scale#)r
  Text = Home
- MouseOverAction = [!SetOption File1.IMG ImageAlpha "160"][!SetOption File1 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File1.IMG ImageAlpha "255"][!SetOption File1 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File1.IMG ImageAlpha "160"][!SetOption File1 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File1.IMG ImageAlpha "255"][!SetOption File1 FontColor "#Crust#FF"][!Update]
 
 [File2.IMG]
  Meter = Image
@@ -488,9 +474,9 @@
  W = (3 * #Scale#)
  X = (14.5 * #Scale#)r
  Y = (51.8 * #Scale#)
- MouseOverAction = [!SetOption File2.IMG ImageAlpha "160"][!SetOption File2 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File2.IMG ImageAlpha "255"][!SetOption File2 FontColor "#Crust#,255"][!Update]
-
+ MouseOverAction = [!SetOption File2.IMG ImageAlpha "160"][!SetOption File2 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File2.IMG ImageAlpha "255"][!SetOption File2 FontColor "#Crust#FF"][!Update]
+ LeftMouseUpAction = [Shell:::{A8CDFF1C-4878-43be-B5FD-F8091C1C60D0}]
 [File2]
  Meter = String
  MeterStyle = FontStyle
@@ -499,8 +485,8 @@
  X = (19.5 * #Scale#)
  Y = (3.3 * #Scale#)r
  Text = Documents
- MouseOverAction = [!SetOption File2.IMG ImageAlpha "160"][!SetOption File2 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File2.IMG ImageAlpha "255"][!SetOption File2 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File2.IMG ImageAlpha "160"][!SetOption File2 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File2.IMG ImageAlpha "255"][!SetOption File2 FontColor "#Crust#FF"][!Update]
 
 [File3.IMG]
  Meter = Image
@@ -509,8 +495,9 @@
  W = (3 * #Scale#)
  X = (17.5 * #Scale#)r
  Y = (51.8 * #Scale#)
- MouseOverAction = [!SetOption File3.IMG ImageAlpha "160"][!SetOption File3 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File3.IMG ImageAlpha "255"][!SetOption File3 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File3.IMG ImageAlpha "160"][!SetOption File3 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File3.IMG ImageAlpha "255"][!SetOption File3 FontColor "#Crust#FF"][!Update]
+ LeftMouseUpAction = [Shell:::{374DE290-123F-4565-9164-39C4925E467B}]
 
 [File3]
  Meter = String
@@ -520,8 +507,8 @@
  X = (33.5 * #Scale#)
  Y = (3.3 * #Scale#)r
  Text = Downloads
- MouseOverAction = [!SetOption File3.IMG ImageAlpha "160"][!SetOption File3 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File3.IMG ImageAlpha "255"][!SetOption File3 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File3.IMG ImageAlpha "160"][!SetOption File3 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File3.IMG ImageAlpha "255"][!SetOption File3 FontColor "#Crust#FF"][!Update]
 
 [File4.IMG]
  Meter = Image
@@ -530,8 +517,9 @@
  W = (3 * #Scale#)
  X = (9 * #Scale#)
  Y = (60 * #Scale#)
- MouseOverAction = [!SetOption File4.IMG ImageAlpha "160"][!SetOption File4 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File4.IMG ImageAlpha "255"][!SetOption File4 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File4.IMG ImageAlpha "160"][!SetOption File4 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File4.IMG ImageAlpha "255"][!SetOption File4 FontColor "#Crust#FF"][!Update]
+ LeftMouseUpAction = [Shell:::{1CF1260C-4DD0-4ebb-811F-33C572699FDE}]
 
 [File4]
  Meter = String
@@ -541,8 +529,8 @@
  X = (8. * #Scale#)
  Y = (3.3 * #Scale#)r
  Text = Music
- MouseOverAction = [!SetOption File4.IMG ImageAlpha "160"][!SetOption File4 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File4.IMG ImageAlpha "255"][!SetOption File4 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File4.IMG ImageAlpha "160"][!SetOption File4 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File4.IMG ImageAlpha "255"][!SetOption File4 FontColor "#Crust#FF"][!Update]
 
 [File5.IMG]
  Meter = Image
@@ -551,8 +539,9 @@
  W = (3 * #Scale#)
  X = (15 * #Scale#)r
  Y = ([File4.IMG:Y])
- MouseOverAction = [!SetOption File5.IMG ImageAlpha "160"][!SetOption File5 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File5.IMG ImageAlpha "255"][!SetOption File5 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File5.IMG ImageAlpha "160"][!SetOption File5 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File5.IMG ImageAlpha "255"][!SetOption File5 FontColor "#Crust#FF"][!Update]
+ LeftMouseUpAction = [Shell:::{3ADD1653-EB32-4cb0-BBD7-DFA0ABB5ACCA}]
 
 [File5]
  Meter = String
@@ -562,8 +551,8 @@
  X = (21 * #Scale#)
  Y = (3.3 * #Scale#)r
  Text = Photos
- MouseOverAction = [!SetOption File5.IMG ImageAlpha "160"][!SetOption File5 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File5.IMG ImageAlpha "255"][!SetOption File5 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File5.IMG ImageAlpha "160"][!SetOption File5 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File5.IMG ImageAlpha "255"][!SetOption File5 FontColor "#Crust#FF"][!Update]
 
 [File6.IMG]
  Meter = Image
@@ -572,9 +561,10 @@
  W = (3 * #Scale#)
  X = (16 * #Scale#)r
  Y = ([File4.IMG:Y])
- MouseOverAction = [!SetOption File6.IMG ImageAlpha "160"][!SetOption File6 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File6.IMG ImageAlpha "255"][!SetOption File6 FontColor "#Crust#,255"][!Update]
-
+ MouseOverAction = [!SetOption File6.IMG ImageAlpha "160"][!SetOption File6 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File6.IMG ImageAlpha "255"][!SetOption File6 FontColor "#Crust#FF"][!Update]
+ LeftMouseUpAction = [Shell:::{A0953C92-50DC-43bf-BE83-3742FED03C9C}]
+ 
 [File6]
  Meter = String
  MeterStyle = FontStyle
@@ -583,5 +573,5 @@
  X = (35 * #Scale#)
  Y = (3.3 * #Scale#)r
  Text = Videos
- MouseOverAction = [!SetOption File6.IMG ImageAlpha "160"][!SetOption File6 FontColor "#Crust#,160"][!Update]
- MouseLeaveAction = [!SetOption File6.IMG ImageAlpha "255"][!SetOption File6 FontColor "#Crust#,255"][!Update]
+ MouseOverAction = [!SetOption File6.IMG ImageAlpha "160"][!SetOption File6 FontColor "#Crust#A0"][!Update]
+ MouseLeaveAction = [!SetOption File6.IMG ImageAlpha "255"][!SetOption File6 FontColor "#Crust#FF"][!Update]

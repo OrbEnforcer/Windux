@@ -15,9 +15,9 @@
 
 [CoverContainer]
  Meter = Shape 
- Shape = Rectangle 0, 0, (#CoverSize# * #Scale#), (#CoverSize# * #Scale#), 8 | Fill Color #Main#
- X = (1 * #Scale#)r
- Y = (1 * #Scale#)r
+ Shape = Rectangle 0, 0, (#CoverSize# * #Scale#), (#CoverSize# * #Scale#), 1 | Fill Color #Main#
+ X = (1.07 * #Scale#)r
+ Y = (1.07 * #Scale#)r
 
 [Cover.IMG]
  Meter = Image
@@ -54,17 +54,6 @@
  ClipString = 1
  Group = On
 
-[Progress]
- Meter = String
- MeterStyle = FontStyle
- MeasureName = MProgress
- MeasureName2 = MDuration
- FontSize = (1.5 * #Scale#)
- Text = %1 | %2
- FontWeight = 500
- X = (23 * #Scale#)
- Y = (16 * #Scale#)
-
 [Box2]
  Meter = Shape
  Shape = Rectangle 0, 0, ((#Width# - 2) * #Scale#), (9 * #Scale#), 1 | Extend BoxStyle
@@ -88,29 +77,44 @@
  MeasureName = MProgressBar
  BarOrientation = Horizontal
  W = ((#Width# - 7) * #Scale#)
- H = (1.5 * #Scale#)
+ H = (2 * #Scale#)
  X = (3.9 * #Scale#)
- Y = (22 * #Scale#)
+ Y = (26 * #Scale#)
  BarColor = #Main#
  SolidColor = #Base#
+
+[Progress]
+ Meter = String
+ MeterStyle = FontStyle
+ MeasureName = MProgress
+ MeasureName2 = MDuration
+ FontColor = #Crust#
+ FontSize = (1.5 * #Scale#)
+ Text = %1 / %2
+ X = (23 * #Scale#)
+ Y = (25.7 * #Scale#)
 
 [RepeatSong]
  Meter = Image
  MeterStyle = ButtonStyle
- X = (12.5 * #Scale#)
- Y = (3.5 * #Scale#)r
+ X = (19.5 * #Scale#)
+ Y = (22 * #Scale#)
  LeftMouseUpAction =  [!CommandMeasure "RepeatButton" "Repeat"]
 
 [Prev]
  Meter = Image
  ImageName = #@#Images/Prev4.png
  MeterStyle = ButtonStyle
+ Y = (0 * #Scale#)r
  LeftMouseUpAction = [!CommandMeasure "Title" "Previous"]
 
 [PlayPause]
  Meter = Image
  ImageName = [StateButton]
  MeterStyle = ButtonStyle
+ W = (4 * #Scale#)
+ X = (27.5 * #Scale#)
+ Y = (21 * #Scale#)
  DynamicVariables = 1
  LeftMouseUpAction = [!CommandMeasure "StateButton" "PlayPause"]
 
@@ -119,8 +123,11 @@
  ImageName = #@#Images/Next4.png
  MeterStyle = ButtonStyle
  LeftMouseUpAction = [!CommandMeasure "Title" "Next"]
+ X = (6 * #Scale#)r
+ Y = (1 * #Scale#)r
 
 [ShuffleSong]
  Meter = Image
  MeterStyle = ButtonStyle
  LeftMouseUpAction =  [!CommandMeasure "ShuffleButton" "Shuffle"]
+ Y = (0 * #Scale#)r

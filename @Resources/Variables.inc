@@ -4,7 +4,7 @@ Main =CBA6F7
 ;All text and button colour
 Crust =1e1e2e
 ;Window and Bar colour
-Mantle =1e1e2e
+Mantle =CAA5F6
 ;Outline colour
 Base =181825
 ;Highlight colour
@@ -46,11 +46,7 @@ S24H =1
 Size = 1.0
 
 ;BROWSER
-Browser = Vivaldi
-
-;SEARCH ENGINE
-Bing = "www.bing.com"
-Google = "www.google.com"
+Browser =Vivaldi
 
 ;TERMINUX
 command =$UserInput$ 
@@ -62,3 +58,4 @@ WindowHeight2 = 48
 ;GLOBAL VARS
 Scale = 10
 ScrollMouseIncrement = 0.05
+$Icon$=C:\Users\shwet\Documents\Rainmeter\Skins\Windux\@Resources\Images/Browsers/Vivaldi

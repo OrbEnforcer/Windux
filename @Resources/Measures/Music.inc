@@ -16,6 +16,11 @@
  Plugin = WebNowPlaying
  PlayerType = Artist
 
+[Album]
+ Measure = Plugin 
+ Plugin = WebNowPlaying
+ PlayerType = Album
+
 [PlayerName]
  Measure = Plugin
  Plugin = WebNowPlaying
@@ -37,10 +42,10 @@
  PlayerType = Progress
 
 [StateButton]
- Measure=Plugin
- Plugin=WebNowPlaying
- PlayerType=State
- Substitute="0":"#@#Images/Play.png","1":"#@#Images/Pause.png","2":"#@#Images/Play.png"
+ Measure = Plugin
+ Plugin = WebNowPlaying
+ PlayerType = State
+ Substitute = "0":"#@#Images/Play.png","1":"#@#Images/Pause.png","2":"#@#Images/Play.png"
 
 [RepeatButton]
 Measure = Plugin

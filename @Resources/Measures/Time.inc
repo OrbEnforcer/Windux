@@ -8,4 +8,8 @@
 
 [Date.Measure]
  Measure = Time
+ Format = %A, %d %B
+
+[HalfDate.Measure]
+ Measure = Time
  Format = %a, %d %b

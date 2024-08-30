@@ -43,11 +43,11 @@
  Meter = String
  MeterStyle = FontStyle
  MeasureName = Active.Measure
- W = (#Scale# * 40)
+ W = (#Scale# * 50)
  ClipString = 1
  Text = %1 
  X = (1.5 * #Scale#)r
- Y = (0.25 * #Scale#)
+ Y = (0.24 * #Scale#)
  FontSize = 1
  InLineSetting= Size | (1.1 * #Scale#)
 
@@ -60,7 +60,7 @@
 
 [AC]
  Meter = Image
- ImageName = #@#Images/AC.png
+ ImageName = #@#Images/AC2.png
  ImageTint = #Main#
  W = ([Home:W])
  X = (188.8 * #Scale#)
@@ -70,10 +70,10 @@
  ;LeftMouseUpAction = ["#@#AHK/ActionCenter.exe"]
  LeftMouseUpAction = [!ToggleMeterGroup ACG]
 
-[SpotifyBox]
+[MusicBox]
  Meter = Shape
  Shape = Rectangle 0, 0, (3 * #Scale#), (28 * #Size#), 5 | StrokeWidth 0 | Fill Color #Base# | Rotate 0
- X = (159.3 * #Scale#)
+ X = (158.3 * #Scale#)
  Y = (0.7 * #Scale#)
  Hidden = 1
 
@@ -91,15 +91,15 @@
  Y = (0.7 * #Scale#)
  Hidden = 1
 
-[Spotify]
+[Music]
  Meter = Image
- ImageName = #@#Images/Apps/Spotify
+ ImageName = #@#Images/MusicNote2
  ImageTint = #Green#
  W = (1.8 * #Scale#)
- X = (160 * #Scale#)
+ X = (159 * #Scale#)
  Y = (1.3 * #Scale#)
- MouseOverAction = [!ShowMeter SpotifyBox]
- MouseLeaveAction = [!HideMeter SpotifyBox]
+ MouseOverAction = [!ShowMeter MusicBox]
+ MouseLeaveAction = [!HideMeter MusicBox]
  LeftMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Player" "Player.ini" ]
  RightMouseUpAction = [!ToggleConfig "Windux\Windowed Skins\Visualizer" "Visualizer.ini" ]
 
@@ -137,7 +137,7 @@
  Meter = String
  Text = |
  MeterStyle = FontStyle 
- X = (169 * #Scale#)
+ X = (167.8 * #Scale#)
  Y = (0.25 * #Scale#)
 
 ;-------------;
@@ -146,8 +146,8 @@
 
 [ClockBox]
  Meter = Shape
- Shape = Rectangle 0, 0, (6 * #Scale#), (28 * #Size#), 5 | StrokeWidth 0 | Fill Color #Base# | Rotate 0
- X = (170.1 * #Scale#)
+ Shape = Rectangle 0, 0, (6 * #Scale#), (28 * #Size#), 5 | StrokeWidth 0 | Fill Color #Base#
+ X = (168.7 * #Scale#)
  Y = (0.7 * #Scale#)
  Hidden = 1
 
@@ -155,7 +155,7 @@
  Meter = String
  MeterStyle = FontStyle
  MeasureName = #TF#
- X = (171 * #Scale#)
+ X = (169.5 * #Scale#)
  Y = ([Active.txt:Y])
  MouseOverAction = [!ShowMeter ClockBox]
  MouseLeaveAction = [!HideMeter ClockBox]
@@ -173,20 +173,24 @@
  X = (1.85 * #Scale#)r
  Y = (0.2 * #Scale#)
 
-[CalendarBox]
- Meter = Shape
- Shape = Rectangle 0, 0, (11.5 * #Scale#), (28 * #Size#), 5 | StrokeWidth 0 | Fill Color #Base#
- X = (176.5 * #Scale#)
- Y = (0.7 * #Scale#)
-
-[Calendar]
+[Battery.IMG]
+ Meter = Image
+ ImageName = Battery.Measure
+ ImageTint = #Main#
+ W = (2 * #Scale#)
+ X = (174.8 * #Scale#)
+ Y = ([Home:Y])
+ 
+[Battery.txt]
  Meter = String
- MeasureName = Date.Measure
+ MeasureName = Battery.Measure
  MeterStyle = FontStyle
+ FontFace= JetBrains Mono Medium
+ FontWeight = 700
  FontColor = #Main#
- X = (177.5 * #Scale#)
+ X = (2.5 * #Scale#)r
  Y = ([Active.txt:Y])
- Text = %1
+ Text = %1%
 
 ;-------------;
 ;Action Center;
@@ -328,43 +332,57 @@
  W = (30 * #Scale#)
  Group = ACG
  Hidden = 1
- 
-[Battery.IMG]
+
+[Calendar]
+ Meter = String
+ MeasureName = Date.Measure
+ MeterStyle = FontStyle
+ FontColor = #Main#
+ X = (154 * #Scale#)
+ Y = (23.6 * #Scale#)
+ Text = %1
+ Group = ACG
+ Hidden = 1
+
+[WinActionCenter]
  Meter = Image
- ImageName = #@#Images/Battery0.png
+ ImageName = #@#Images/AC.png
  ImageTint = #Main#
  W = (2 * #Scale#)
- X = (153 * #Scale#)
+ X = (29 * #Scale#)r
  Y = (24.5 * #Scale#)
  Group = ACG
+ MouseOverAction = [!SetOption WinActionCenter ImageAlpha "160"][!Update]
+ MouseLeaveAction = [!SetOption WinActionCenter ImageAlpha "255"][!Update]
+ LeftMouseUpAction = ["#@#AHK/ActionCenter.exe"]
  Hidden = 1
- 
-[Battery.txt]
- Meter = String
- MeasureName = Battery.Measure
- MeterStyle = FontStyle
- FontFace= JetBrains Mono Medium
- FontWeight = 700
- FontColor = #Main#
+
+[NotifArea]
+ Meter = Image
+ ImageName = #@#Images/Notif.png
+ ImageTint = #Main#
+ W = (2 * #Scale#)
  X = (3 * #Scale#)r
- Y = (23.6 * #Scale#)
- Text = %1%
+ Y = (24.5 * #Scale#)
  Group = ACG
+ MouseOverAction = [!SetOption NotifArea ImageAlpha "160"][!Update]
+ MouseLeaveAction = [!SetOption NotifArea ImageAlpha "255"][!Update]
+ LeftMouseUpAction = ["#@#AHK/Notify.exe"]
  Hidden = 1
- 
+
 [Settings]
  Meter = Image
  ImageName = #@#Images/Settings.png
  ImageTint = #Main#
  W = (2 * #Scale#)
- X = (32 * #Scale#)r
+ X = (3 * #Scale#)r
  Y = (24.5 * #Scale#)
  Group = ACG
  MouseOverAction = [!SetOption Settings ImageAlpha "160"][!Update]
  MouseLeaveAction = [!SetOption Settings ImageAlpha "255"][!Update]
  LeftMouseUpAction = [!ActivateConfig "Windux\Settings" "Settings.ini"]
  Hidden = 1
- 
+
 ;----------;
 ;HOME GROUP;
 ;----------;
@@ -410,14 +428,27 @@
  Y = (6.5 * #Scale#)
  Group = HMG
  Hidden = 1
- 
+
+[Lock]
+ Meter = Image
+ ImageName = #@#Images/Lock
+ ImageTint = #Main#
+ W = (2.5 * #Scale#)
+ X = (28.5 * #Scale#)r
+ Y = (1 * #Scale#)r
+ MouseOverAction = [!SetOption Lock ImageAlpha "90"][!Update]
+ MouseLeaveAction = [!SetOption Lock ImageAlpha "255"][!Update]
+ LeftMouseUpAction = [!ActivateConfig "Windux\Windowed Skins\Lock" "Lock.ini"]
+ Group = HMG
+ Hidden = 1
+
 [Row1]
  Meter = Shape
  Shape = Rectangle 0, 0, (38 * #Scale#), (5 * #Scale#), 4 | Extend HomeStyle
  HomeStyle = StrokeWidth 0 | Fill Color 0,0,0,1
  SolidColor = 0,0,0,1
  X = (1.5 * #Scale#)
- Y = (5 * #Scale#)r
+ Y = (11.5 * #Scale#)
  Group = HMG
  Hidden = 1
  
@@ -533,7 +564,33 @@
  LeftMouseUpAction = ["%AppData%\Spotify\Spotify.exe"]
  Group = HMG
  Hidden = 1
- 
+
+[BG3]
+ Meter = Shape
+ Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
+ BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
+ X = (21 * #Scale#)
+ Y = ([BrowserBG:Y])
+ Group = HMG
+ Hidden = 1
+
+[BG4]
+ Meter = Shape
+ Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
+ BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
+ X = (27 * #Scale#)
+ Y = ([BrowserBG:Y])
+ Group = HMG
+ Hidden = 1
+
+[BG5]
+ Meter = Shape
+ Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
+ BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
+ X = (33 * #Scale#)
+ Y = ([BrowserBG:Y])
+ Group = HMG
+ Hidden = 1
 ;--------;
 ;EXPLORER;
 ;--------;
