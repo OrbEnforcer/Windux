@@ -565,7 +565,7 @@
  Group = HMG
  Hidden = 1
 
-[BG3]
+[BG4]
  Meter = Shape
  Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
  BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
@@ -574,7 +574,20 @@
  Group = HMG
  Hidden = 1
 
-[BG4]
+[App4]
+ Meter = Image
+ ImageName = #Icon1#
+ ImageTint = #Main#
+ W = (3 * #Scale#)
+ X = (1 * #Scale#)r
+ Y = (1 * #Scale#)r
+ MouseOverAction = [!SetOption BG4 BGStyle "StrokeWidth 2 | Stroke Color #Base# | Fill Color #Base#"][!Update]
+ MouseLeaveAction = [!SetOption BG4 BGStyle "StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1"][!Update]
+ LeftMouseUpAction = #WholePath1#
+ Group = HMG
+ Hidden = 1 
+
+[BG5]
  Meter = Shape
  Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
  BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
@@ -583,7 +596,20 @@
  Group = HMG
  Hidden = 1
 
-[BG5]
+[App5]
+ Meter = Image
+ ImageName = #Icon2#
+ ImageTint = #Main#
+ W = (3 * #Scale#)
+ X = (1 * #Scale#)r
+ Y = (1 * #Scale#)r
+ MouseOverAction = [!SetOption BG5 BGStyle "StrokeWidth 2 | Stroke Color #Base# | Fill Color #Base#"][!Update]
+ MouseLeaveAction = [!SetOption BG5 BGStyle "StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1"][!Update]
+ LeftMouseUpAction = #WholePath2#
+ Group = HMG
+ Hidden = 1 
+
+[BG6]
  Meter = Shape
  Shape = Rectangle 0,0, (5 * #Scale#), (5 * #Scale#), 4 | Extend BGStyle
  BGStyle = StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1
@@ -591,6 +617,19 @@
  Y = ([BrowserBG:Y])
  Group = HMG
  Hidden = 1
+
+[App6]
+ Meter = Image
+ ImageName = #Icon3#
+ ImageTint = #Main#
+ W = (3 * #Scale#)
+ X = (1 * #Scale#)r
+ Y = (1 * #Scale#)r
+ MouseOverAction = [!SetOption BG6 BGStyle "StrokeWidth 2 | Stroke Color #Base# | Fill Color #Base#"][!Update]
+ MouseLeaveAction = [!SetOption BG6 BGStyle "StrokeWidth 2 | Stroke Color #Main# | Fill Color 0,0,0,1"][!Update]
+ LeftMouseUpAction = #WholePath3#
+ Group = HMG
+ Hidden = 1 
 ;--------;
 ;EXPLORER;
 ;--------;
