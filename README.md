@@ -1,10 +1,18 @@
 # Windux
 
 ## Just a bunch of random ideas I took from reddit or other OS and tried to get them on windows through rainmeter.
-**NOTE - WINDUX BAR CURRENTLY WORKS BEST ON 1920×1080 SCREENS**
+**NOTE - WINDUX BAR WORKS BEST ON 1920×1080 SCREENS**
 
 ### PREVIEW
-#### Version 3.2 - Work In Progress Segmendux and new Home style
+#### Version 3.2
+
+![Screenshot 2024-08-30 193353](https://github.com/user-attachments/assets/94f8a8d5-33ba-4f6c-a0df-53869682eb88)
+![Screenshot 2024-08-30 193427](https://github.com/user-attachments/assets/84091269-b6f1-49e0-ae80-4be24c1b9b2b)
+![Screenshot 2024-08-30 201150](https://github.com/user-attachments/assets/1f34076e-8c35-4f9e-bfe5-671fb8a617fa)
+![Screenshot 2024-08-30 201420](https://github.com/user-attachments/assets/8b114623-f6d4-4961-911a-04597420546e)
+![2024-05-12 (2)](https://github.com/OrbEnforcer/Windux/assets/108188721/7d79ceda-341e-4d28-a198-b132a33b89e7)
+
+#### 3.2 Concepts that didn't make it to final release 
 
 ![Screenshot 2024-06-18 171129](https://github.com/OrbEnforcer/Windux/assets/108188721/2a5ca0a1-1a68-4f9d-b025-ef71bc7b43bb)
 
@@ -12,7 +20,7 @@
 
 https://github.com/OrbEnforcer/Windux/assets/108188721/4ef8c37f-f2c5-4e68-8b15-c05c36002f08
 
-![2024-05-12 (2)](https://github.com/OrbEnforcer/Windux/assets/108188721/7d79ceda-341e-4d28-a198-b132a33b89e7)
+
 
 #### Version 3.1
 ![2024-05-07](https://github.com/OrbEnforcer/Windux/assets/108188721/6d58ce44-8130-40ba-8638-2a64547f6976)
